@@ -4,8 +4,7 @@ const Hero = () => {
   return (
     <div className="hero hero-padding">
       <div className="container">
-        This is hero
-        <button className="btn btn-primary">button</button>
+        This is hero 01032125
       </div>
     </div>
   );
