@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Navbar } from "react-bootstrap";
 
 const Header = () => {
@@ -30,22 +29,12 @@ const Header = () => {
           >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a
-                  className="nav-link"
-                  href="#"
-                  role="button"
-                  aria-expanded="false"
-                >
+                <a className="nav-link" href="#">
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link"
-                  href="#"
-                  role="button"
-                  aria-expanded="false"
-                >
+                <a className="nav-link" href="#">
                   All Houses
                 </a>
               </li>
@@ -57,6 +46,18 @@ const Header = () => {
               <li className="nav-item">
                 <a className="nav-link" href="#">
                   Contact
+                </a>
+              </li>
+            </ul>
+            <ul className="navbar-nav navbar__right d-block d-lg-none">
+              <li className="nav-item">
+                <a className="nav-link" href="mailto:admin@gmail.com">
+                  admin@gmail.com
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="tel:0123456789">
+                  0123456789
                 </a>
               </li>
             </ul>

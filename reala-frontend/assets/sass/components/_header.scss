@@ -94,6 +94,13 @@
       }
     }
   }
+  .navbar__right {
+    .nav-item {
+      .nav-link:hover {
+        color: $color-primary;
+      }
+    }
+  }
 }
 @media screen and (max-width: 991.98px) {
   .header {
@@ -141,9 +148,6 @@
 @media screen and (min-width: 992px) {
   .navbar__right {
     .nav-item {
-      &:hover {
-        color: $color-primary;
-      }
       &:first-child {
         .nav-link {
           padding: 15px 0 !important;
