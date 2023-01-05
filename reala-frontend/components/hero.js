@@ -5,12 +5,12 @@ import { BsSearch } from "react-icons/bs";
 const Hero = () => {
   const [key, setKey] = useState("rent");
   return (
-    <div className="hero hero-padding">
+    <div className="hero">
       <div className="container">
-        <div className="row">
-          <div className="col-md-6">
+        <div className="row align-items-center">
+          <div className="col-lg-6">
             <h1 className="display-3">Find your dream home now</h1>
-            <h4>We helps people to getting home and renting with good price</h4>
+            <h5 className="mb-5">We helps people to getting home and renting with good price</h5>
             <Tabs
               id="controlled-tab-example"
               activeKey={key}
@@ -29,7 +29,7 @@ const Hero = () => {
                     <option value="">Industial</option>
                   </select>
                   <button>
-                      <BsSearch />
+                    <BsSearch />
                   </button>
                 </div>
               </Tab>
@@ -46,15 +46,18 @@ const Hero = () => {
                     <option value="">Industial</option>
                   </select>
                   <button>
-                      <BsSearch />
+                    <BsSearch />
                   </button>
                 </div>
               </Tab>
             </Tabs>
           </div>
-          <div className="col-md-6">
+          <div className="col-lg-6">
             <div className="hero__image">
-              <img src="images/hero.jpg" alt="hero" className="img-fluid" />
+              <img src="images/hero.jpg" alt="hero" />
+              <div className="image-two">
+                <img src="images/house1.jpg" alt="hero" />
+              </div>
             </div>
           </div>
         </div>

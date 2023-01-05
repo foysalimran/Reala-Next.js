@@ -5,6 +5,7 @@ import Hero from "../components/hero";
 import FeaturedListing from "../components/featured-listing";
 import WhyChooseUs from "../components/why-choose-us";
 import PropertyListing from "../components/property-listing";
+import Testimonial from "../components/testimonial";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +16,7 @@ export default function Home() {
       <FeaturedListing />
       <WhyChooseUs />
       <PropertyListing />
+      <Testimonial />
     </Layout>
   );
 }
