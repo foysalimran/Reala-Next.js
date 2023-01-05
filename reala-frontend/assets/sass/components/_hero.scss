@@ -1,35 +1,65 @@
 .hero {
-    background-color: $color-secondary;
-    .tab-content {
-        background-color: $color-light;
-    }
-    &__search {
-        padding: 15px;
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        box-shadow: 0px 16px 40px $color-shadow;
-        height: 95px;
-        select {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            &:focus {
-                outline: none;
-            }
-        }
-        button {
+  background-color: $color-secondary;
+  .tab-content {
+    background-color: $color-light;
+  }
+  .nav-tabs {
+    border: none;
+    .nav-link {
+      border: none;
+      color: $color-dark;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 4px;
+        border-radius: 5px 5px 0 0;
+        background-color: transparent;
+      }
+      &:hover {
+        color: $color-primary;
+      }
+      &.active {
+        color: $color-primary;
+        &::after {
             background-color: $color-primary;
-            border: none;
-            height: 100%;
-            padding: 15px;
-            border-radius: 5px;
         }
+      }
     }
-    &__image {
-        img {
-            border-radius: 5px;
-        }
+  }
+  &__search {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    box-shadow: 0px 16px 40px $color-shadow;
+    height: 85px;
+    select {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
     }
+    button {
+      background-color: $color-primary;
+      border: none;
+      height: 100%;
+      padding: 15px 25px;
+      border-radius: 0 5px 5px 0;
+      svg {
+        font-size: 30px;
+        color: $color-light;
+      }
+    }
+  }
+  &__image {
+    img {
+      border-radius: 5px;
+    }
+  }
 }

@@ -1,0 +1,62 @@
+.featured-list {
+  .nav-tabs {
+    border: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    .nav-link {
+      border: none;
+      color: $color-dark;
+      border-radius: 18px;
+      font-size: 14px;
+      padding: 7px 25px;
+      background-color: $color-secondary;
+      transition: all 0.5s;
+      font-weight: 600;
+      &:hover {
+        color: $color-primary;
+      }
+      &.active {
+        background-color: $color-primary;
+        color: $color-light;
+        &:hover {
+          color: $color-light;
+        }
+      }
+    }
+  }
+  &__item {
+    border-radius: 5px;
+    box-shadow: 2px 0px 15px 5px $color-shadow;
+    background-color: $color-secondary;
+    &--image {
+      position: relative;
+      img {
+        border-radius: 5px 5px 0 0;
+      }
+      .popular {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        padding: 0 8px;
+        border-radius: 5px;
+        background-color: $color-primary;
+        color: $color-light;
+      }
+      .price {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        padding: 0 8px;
+        border-radius: 5px;
+        background-color: $color-primary;
+        color: $color-light;
+      }
+    }
+    &__info {
+      padding: 15px;
+    }
+  }
+}

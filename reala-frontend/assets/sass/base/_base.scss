@@ -60,71 +60,15 @@ body {
   font-weight: 600;
   display: inline-block;
 }
-// Section title
-[class*="section-title-"] {
-  margin-bottom: 50px;
-  span {
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: $color-primary;
-    font-weight: 600;
-    display: inline-block;
+
+// section title
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+  text-transform: capitalize;
+  h1 {
+    font-size: 2.5rem;
   }
-  h2 {
-    margin-top: 0px;
-  }
-}
-
-.section-title-left {
-  p {
-    margin-left: 0;
-  }
-}
-
-.section-title-center {
-  p {
-    margin: 0 auto;
-  }
-}
-
-.section-divider {
-  margin-top: 20px;
-}
-
-/* Traingle divider */
-
-.divider-triangle {
-  width: 200px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $color-primary;
-  opacity: 0.4;
-  position: relative;
-  display: inline-block;
-}
-
-.divider-triangle:before {
-  position: absolute;
-  content: "";
-  width: 18px;
-  height: 18px;
-  background-color: $color-primary;
-  top: -9px;
-  opacity: 0.4;
-  right: 50%;
-  transform: rotate(45deg);
-}
-
-.divider-triangle:after {
-  position: absolute;
-  content: "";
-  width: 18px;
-  height: 18px;
-  background: $color-primary;
-  top: -9px;
-  left: 45%;
-  opacity: 0.4;
-  transform: rotate(45deg);
 }
 
 .button {
