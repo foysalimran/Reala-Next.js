@@ -69,8 +69,16 @@ body {
   h1 {
     font-size: 2.5rem;
   }
+  &.left {
+    text-align: left;
+    padding-bottom: 20px;
+  }
+  &.right {
+    text-align: right;
+  }
 }
 
+// button
 .button {
   pointer-events: auto;
   cursor: pointer;

@@ -3,7 +3,7 @@
 // Body font
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-// Font Family 
+// Font Family
 $font-heading: "Philosopher", sans-serif;
 $font-display: "Poppins", sans-serif;
 
@@ -33,4 +33,14 @@ h6 {
 .display-5,
 .display-6 {
   font-weight: 700;
+  color: $color-dark;
+}
+
+.fs-1,
+.fs-2,
+.fs-3,
+.fs-4,
+.fs-5,
+.fs-6 {
+  color: $color-dark;
 }
