@@ -1,3 +1,60 @@
 .footer {
-    background-color: $color-dark;
+  background-color: $color-dark;
+  padding-bottom: 50px;
+  &__top {
+    width: 600px;
+    margin-bottom: 25px;
+    text-align: center;
+    h3 {
+      color: $color-light;
+      margin-bottom: 20px;
+    }
+    form {
+        .footer__subscribe {
+        display: flex;
+        align-items: center;
+        input {
+          width: 450px;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 5px 0  0  5px ;
+        }
+        button {
+            background-color: $color-primary;
+            color: $color-light;
+            border-radius: 0 5px 5px 0;
+            border: none;
+            padding: 10px 15px;
+        }
+      }
+    }
+  }
+  &__social {
+    h3 {
+      color: $color-light;
+    }
+    p {
+      color: $color-light;
+    }
+    ul {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      li {
+        a {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $color-primary;
+          color: $color-dark;
+          svg {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
 }

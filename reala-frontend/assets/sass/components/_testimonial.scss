@@ -1,8 +1,11 @@
 .testimonial {
   &__item {
     background-color: $color-light;
-    padding: 20px;
+    padding: 30px;
     border-radius: 5px;
+    @include media-breakpoint-down(lg) {
+      padding: 20px;
+    }
     .user {
       &__image {
         margin-bottom: 15px;
