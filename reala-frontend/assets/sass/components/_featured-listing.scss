@@ -30,7 +30,6 @@
   &__item {
     border-radius: 5px;
     box-shadow: 2px 0px 15px 5px $color-shadow;
-    background-color: $color-secondary;
     &--image {
       position: relative;
       img {
@@ -57,6 +56,43 @@
     }
     &__info {
       padding: 15px;
+      &--ratting {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        margin-bottom: 10px;
+        span {
+          background-color: $color-primary;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          border-radius: 5px;
+          padding: 5px 8px;
+          color: $color-light;
+        }
+      }
+      &--list {
+        li {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          padding-bottom: 8px;
+        }
+      }
+      &--expert {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 15px;
+        background-color: $color-secondary;
+        padding: 10px 15px;
+        border-radius: 5px;
+        li {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+      }
     }
   }
 }
