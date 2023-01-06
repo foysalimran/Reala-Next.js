@@ -5,6 +5,9 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
+import { AiFillHeart } from "react-icons/ai";
+import { GoLocation } from "react-icons/go";
+import { MdCall, MdOutlineEmail } from "react-icons/md";
 
 // const mailchimpLink = process.env.MAILCHAIMP_LINK;
 // console.log(mailchimpLink);
@@ -56,7 +59,7 @@ function SubscribeForm({ status, message, onValidated }) {
 
 const Footer = () => {
   return (
-    <div className="footer section-padding-t">
+    <div className="footer footer-padding-t">
       <div className="container">
         <div className="row">
           <div className="footer__top mx-auto">
@@ -74,12 +77,31 @@ const Footer = () => {
             />
           </div>
         </div>
-        <div className="row">
+        <div className="row footer-padding">
           <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
-            <div className="footer__logo"></div>
+            <div className="footer__logo">
+              <h1>Reala.</h1>
+            </div>
           </div>
           <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
-            <div className="footer__logo"></div>
+            <div className="footer__content">
+              <h3>Venue Location</h3>
+              <ul>
+                <li>
+                  329 Queensberry Street, North Melbourne VIC 3051, Australia.
+                </li>
+                <li>
+                  <GoLocation />{" "}
+                  <a
+                    href="https://www.google.com/maps/place/United+States/@37.2755783,-104.6571311,5z/data=!3m1!4b1!4m5!3m4!1s0x54eab584e432360b:0x1c3bb99243deb742!8m2!3d37.09024!4d-95.712891"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View map location
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="col-lg-4 col-md-6">
             <div className="footer__social">
@@ -107,6 +129,20 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+        <div className="footer__copyright m-20px-t m-20px-b">
+          <div className="row">
+            <div className="col-12">
+              <p className="m-0 text-center">
+                &copy; 2023 All right reserved. Made with
+                <AiFillHeart />
+                by{" "}
+                <a href="https://themeforest.net/user/themeatelier">
+                  ThemeAtelier
+                </a>
+              </p>
             </div>
           </div>
         </div>
