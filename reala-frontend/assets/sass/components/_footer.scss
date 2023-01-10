@@ -25,6 +25,10 @@
           color: $color-light;
           border: none;
           padding: 15px 15px;
+          transition: all 0.5s;
+          &:hover {
+            background-color: $color-secondary;
+          }
         }
       }
     }
@@ -51,9 +55,15 @@
           align-items: center;
           justify-content: center;
           background-color: $color-primary;
-          color: $color-dark;
+          color: $color-light;
+          transition: all 0.5s;
           svg {
             font-size: 22px;
+          }
+        }
+        &:hover {
+          a {
+            background-color: $color-secondary;
           }
         }
       }
@@ -89,7 +99,7 @@
   }
   &__copyright {
     padding: 20px 0;
-    border-top: 1px solid $color-secondary;
+    border-top: 1px solid $color-tertiary;
     p {
       color: $color-light;
       display: flex;

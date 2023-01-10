@@ -12,7 +12,7 @@
       border-radius: 18px;
       font-size: 14px;
       padding: 7px 25px;
-      background-color: $color-secondary;
+      background-color: $color-tertiary;
       transition: all 0.5s;
       font-weight: 600;
       &:hover {
@@ -39,7 +39,7 @@
         position: absolute;
         top: 15px;
         left: 15px;
-        padding: 0 8px;
+        padding: 3px 8px;
         border-radius: 5px;
         background-color: $color-primary;
         color: $color-light;
@@ -48,7 +48,7 @@
         position: absolute;
         bottom: 15px;
         left: 15px;
-        padding: 0 8px;
+        padding: 3px 8px;
         border-radius: 5px;
         background-color: $color-primary;
         color: $color-light;
@@ -85,7 +85,7 @@
         flex-wrap: wrap;
         align-items: center;
         gap: 15px;
-        background-color: $color-secondary;
+        background-color: $color-tertiary;
         padding: 10px 15px;
         border-radius: 5px;
         li {
