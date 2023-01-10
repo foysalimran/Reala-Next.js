@@ -1,0 +1,14 @@
+.contact {
+    input, textarea {
+        width: 100%;
+        padding: 20px 15px;
+        border-radius: 5px;
+        border: 1px solid $color-dark;
+        outline: none;
+        transition: all 0.5s;
+        &:focus {
+            outline: none;
+            border: 1px solid $color-primary;
+        }
+    }
+}
