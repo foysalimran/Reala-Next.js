@@ -12,7 +12,7 @@ const PropertyListing = () => {
   return (
     <div className="featured-list section-padding">
       <div className="container">
-        <SectionTitle title="Featured Listing" />
+        <SectionTitle title="Property Listing" />
         <div className="featured-listing__wrapper">
           <div className="row">
             <div className="col-md-6 col-lg-4 mb-4">

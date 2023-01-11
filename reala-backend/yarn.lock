@@ -9096,6 +9096,11 @@ std-env@^3.0.1:
   resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.3.1.tgz#93a81835815e618c8aa75e7c8a4dc04f7c314e29"
   integrity sha512-3H20QlwQsSm2OvAxWIYhs+j01MzzqwMwGiiO1NQaJYZgJZFPuAbf95/DiKRBSTYIJ2FeGUc+B/6mPGcWP9dO3Q==
 
+strapi-plugin-multi-select@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/strapi-plugin-multi-select/-/strapi-plugin-multi-select-1.1.0.tgz#80085ed81b789dc76901bf8cc172de561131afd7"
+  integrity sha512-h8Ar/BwOyjjBd9xPWtmNC/qrcaUNRtmy9Upkr8BOTY5rg3gvkWgVHhaW/YMB7gENUU8esBHoImb4WdrO4NuNOA==
+
 stream-browserify@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-3.0.0.tgz#22b0a2850cdf6503e73085da1fc7b7d0c2122f2f"
