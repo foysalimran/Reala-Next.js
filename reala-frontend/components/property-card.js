@@ -3,8 +3,21 @@ import { GoLocation } from "react-icons/go";
 import { GiBathtub } from "react-icons/gi";
 import { MdBed, MdCall } from "react-icons/md";
 import { API_URL } from "../config";
+import Link from "next/link";
 
 const PropertyCard = ({ property }) => {
+  const {
+    image,
+    price,
+    slug,
+    title,
+    rating,
+    type,
+    location,
+    phone,
+    beds,
+    baths,
+  } = property.attributes;
   return (
     <div className="col-md-6 col-lg-4 mb-4">
       <div className="featured-list__item">
@@ -12,48 +25,45 @@ const PropertyCard = ({ property }) => {
           <img
             className="img-fluid"
             src={
-              property?.attributes.image?.data !== null
-                ? `${API_URL}${property?.attributes.image?.data[0]?.attributes.url}`
+              image?.data !== null
+                ? `${API_URL}${image?.data[0]?.attributes.url}`
                 : "/images/404.jpg"
             }
-            alt={property.attributes.title}
+            alt={title}
           />
           <div className="popular">Popular</div>
-          <div className="price">${property?.attributes.price} / month</div>
+          <div className="price">${price} / month</div>
         </div>
         <div className="featured-list__item__info">
           <div className="featured-list__item__info--title">
             <h3>
-              <a href="#">{property.attributes.title}</a>
+              <Link href={`/property/${slug}`}>{title}</Link>
             </h3>
           </div>
           <div className="featured-list__item__info--ratting">
             <span>
               <AiFillStar />
-              {property.attributes.rating}
+              {rating}
             </span>{" "}
             5 reviews
           </div>
           <ul className="featured-list__item__info--list">
             <li>
-              <span>{property.attributes.type}</span>
+              <span>{type}</span>
             </li>
             <li>
-              <GoLocation /> {property.attributes.location}
+              <GoLocation /> {location}
             </li>
             <li>
-              <MdCall />{" "}
-              <a href={`tel${property.attributes.phone}`}>
-                {property.attributes.phone}
-              </a>
+              <MdCall /> <a href={`tel${phone}`}>{phone}</a>
             </li>
           </ul>
           <ul className="featured-list__item__info--expert">
             <li>
-              <MdBed /> {property.attributes.beds} Beds
+              <MdBed /> {beds} Beds
             </li>
             <li>
-              <GiBathtub /> {property.attributes.baths} Baths
+              <GiBathtub /> {baths} Baths
             </li>
             <li>
               <AiOutlineHome /> 6,541 sqft
