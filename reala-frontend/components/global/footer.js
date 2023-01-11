@@ -7,10 +7,7 @@ import {
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import { AiFillHeart } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
-import { MdCall, MdOutlineEmail } from "react-icons/md";
-
-// const mailchimpLink = process.env.MAILCHAIMP_LINK;
-// console.log(mailchimpLink);
+import { MAILCHAIMP } from "../../config";
 
 //SUBSCRIBE FORM
 function SubscribeForm({ status, message, onValidated }) {
@@ -31,7 +28,7 @@ function SubscribeForm({ status, message, onValidated }) {
           required
           placeholder="Your email"
         />
-        <button type="submit" onClick={submit}>
+        <button className="button-primary" type="submit" onClick={submit}>
           Subscribe
         </button>
       </div>
@@ -65,7 +62,7 @@ const Footer = () => {
           <div className="footer__top mx-auto">
             <h3>Join Newsletter</h3>
             <MailchimpSubscribe
-              url="https://themeatelier.us17.list-manage.com/subscribe/post?u=318da6141291eeac976c39d64&amp;id=4297abfa34"
+              url={MAILCHAIMP}
               // url={process.env.MAILCHAIMP_LINK}
               render={({ subscribe, status, message }) => (
                 <SubscribeForm

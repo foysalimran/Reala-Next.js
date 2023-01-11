@@ -26,7 +26,7 @@
     "phone": {
       "type": "string"
     },
-    "bades": {
+    "beds": {
       "type": "biginteger"
     },
     "baths": {

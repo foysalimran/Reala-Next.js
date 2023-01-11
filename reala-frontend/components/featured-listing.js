@@ -37,7 +37,11 @@ const FeaturedListing = ({ data }) => {
                       <div className="featured-list__item--image">
                         <img
                           className="img-fluid"
-                          src={`${API_URL}${property?.attributes.image?.data[0]?.attributes.url}`}
+                          src={
+                            property?.attributes.image?.data !== null
+                              ? `${API_URL}${property?.attributes.image?.data[0]?.attributes.url}`
+                              : "/images/404.jpg"
+                          }
                           alt={property.attributes.title}
                         />
                         <div className="popular">Popular</div>
@@ -95,7 +99,11 @@ const FeaturedListing = ({ data }) => {
                       <div className="featured-list__item--image">
                         <img
                           className="img-fluid"
-                          src={`${API_URL}${property?.attributes.image?.data[0]?.attributes.url}`}
+                          src={
+                            property?.attributes.image?.data !== null
+                              ? `${API_URL}${property?.attributes.image?.data[0]?.attributes.url}`
+                              : "/images/404.jpg"
+                          }
                           alt={property.attributes.title}
                         />
                         <div className="popular">Popular</div>

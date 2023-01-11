@@ -18,7 +18,7 @@ export default function Home({ property }) {
       <Hero />
       <FeaturedListing data={data} />
       <WhyChooseUs />
-      <PropertyListing />
+      <PropertyListing data={data} />
       <Testimonial />
     </Layout>
   );

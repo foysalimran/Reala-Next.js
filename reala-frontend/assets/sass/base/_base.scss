@@ -86,7 +86,6 @@ body {
   }
 }
 
-
 ul {
   margin: 0;
   padding: 0;
@@ -97,73 +96,21 @@ ul {
   }
 }
 
-// links
-.link {
+// Button
+.button-primary {
+  background-color: $color-primary;
+  color: $color-light;
+  border: none;
+  padding: 15px 15px;
+  transition: all 0.5s;
   font-weight: 500;
-  position: relative;
-  color: $color-primary;
-  transition: all 0.4s ease-in-out;
-  display: flex;
-  align-items: center;
-  & svg {
-    position: relative;
-    margin-left: 4px;
-    font-size: 20px;
-    transition: all 0.4s ease-in-out;
-  }
   &:hover {
-    color: $color-tertiary;
-    & svg {
-      margin-left: 6px;
-    }
-  }
-}
-
-.calculation {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 10px;
-  &__button {
-    background-color: $color-dark;
-    border-radius: 5px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    button,
-    span {
-      width: 40px;
-      height: 40px;
-      border: none;
-      color: $color-light;
-      background-color: $color-dark;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      svg {
-        color: $color-light;
-        font-weight: 500;
-      }
-      &:focus {
-        outline: none;
-      }
-    }
-    button {
-      transition: all 0.5s;
-      margin-top: 0 !important;
-      &:hover {
-        background-color: $color-secondary;
-      }
-    }
-  }
-  &__price {
-    color: $color-dark;
-    font-weight: 500;
+    background-color: $color-secondary;
+    color: $color-light;
   }
 }
 
 // Social icon
-
 .social-icon {
   padding-left: 0;
   display: flex;
