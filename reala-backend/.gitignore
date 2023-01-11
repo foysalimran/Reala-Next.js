@@ -114,5 +114,6 @@ dist
 build
 .strapi-updater.json
 
-/package-lock.json
-/yarn.lock
+.vscode
+yarn.lock
+package-lock.json

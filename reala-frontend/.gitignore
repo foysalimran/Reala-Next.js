@@ -29,6 +29,6 @@ yarn-error.log*
 .env*.local
 
 # vercel
-.vercel
-
-/package-lock.json
+.vscode
+yarn.lock
+package-lock.json
