@@ -13,7 +13,7 @@ const PropertyListing = ({ data }) => {
             ))}
           </div>
           <div className="text-center mt-4">
-            <a href="/all-houses" className="button-primary">
+            <a href="/all-property" className="button-primary">
               View All Property
             </a>
           </div>

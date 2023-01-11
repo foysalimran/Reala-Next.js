@@ -6,7 +6,7 @@ import { API_URL } from "../config";
 
 const PropertyCard = ({ property }) => {
   return (
-    <div key={property.id} className="col-md-6 col-lg-4 mb-4">
+    <div className="col-md-6 col-lg-4 mb-4">
       <div className="featured-list__item">
         <div className="featured-list__item--image">
           <img
@@ -19,7 +19,7 @@ const PropertyCard = ({ property }) => {
             alt={property.attributes.title}
           />
           <div className="popular">Popular</div>
-          <div className="price">$4,550.00 / month</div>
+          <div className="price">${property?.attributes.price} / month</div>
         </div>
         <div className="featured-list__item__info">
           <div className="featured-list__item__info--title">
@@ -36,7 +36,7 @@ const PropertyCard = ({ property }) => {
           </div>
           <ul className="featured-list__item__info--list">
             <li>
-              <span>Office</span>
+              <span>{property.attributes.type}</span>
             </li>
             <li>
               <GoLocation /> {property.attributes.location}
@@ -53,7 +53,7 @@ const PropertyCard = ({ property }) => {
               <MdBed /> {property.attributes.beds} Beds
             </li>
             <li>
-              <GiBathtub /> {property.attributes.ba} Baths
+              <GiBathtub /> {property.attributes.baths} Baths
             </li>
             <li>
               <AiOutlineHome /> 6,541 sqft

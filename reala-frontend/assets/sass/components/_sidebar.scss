@@ -1,0 +1,23 @@
+.filter {
+  form {
+    margin-bottom: 20px;
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid $color-tertiary;
+      font-size: 16px;
+      transition: all 0.5s;
+      &:hover,
+      &:focus {
+        outline: none;
+        border: 1px solid $color-primary;
+      }
+    }
+  }
+  &__category {
+    h3 {
+      font-size: 20px;
+    }
+  }
+}

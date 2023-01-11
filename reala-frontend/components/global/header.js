@@ -34,7 +34,7 @@ const Header = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/all-houses">
+                <a className="nav-link" href="/all-property">
                   All Houses
                 </a>
               </li>
