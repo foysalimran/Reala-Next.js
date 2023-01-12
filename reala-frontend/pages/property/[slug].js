@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import SectionTitle from "../../components/global/section-title";
 import {
+  MdBed,
   MdOutlineKeyboardArrowLeft,
   MdOutlineNavigateNext,
 } from "react-icons/md";
@@ -16,8 +17,18 @@ import {
 const PropertyPage = ({ properties, slug }) => {
   const property = properties.filter((data) => data?.attributes.slug === slug);
 
-  const { image, price, title, rating, type, location, phone, beds, baths } =
-    property[0]?.attributes;
+  const {
+    image,
+    price,
+    title,
+    description,
+    rating,
+    type,
+    location,
+    phone,
+    beds,
+    baths,
+  } = property[0]?.attributes;
 
   return (
     <Layout>
@@ -61,6 +72,83 @@ const PropertyPage = ({ properties, slug }) => {
             </div>
             <div className="next">
               <MdOutlineNavigateNext />
+            </div>
+          </div>
+        </div>
+        <div className="container">
+          <div className="single-page__top">
+            <h3>
+              {title} <span>Popular</span>
+            </h3>
+            <p className="location">{location}</p>
+            <span className="price">${price}</span>
+          </div>
+        </div>
+        <div className="section-bg section-padding">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-8">
+                <div className="description-card">
+                  <div className="description-card__header">
+                    <h4>Property Details</h4>
+                  </div>
+                  <div className="description-card__body">
+                    <ul>
+                      <li>
+                        <span>
+                          <MdBed />
+                          Beds
+                        </span>{" "}
+                        <span>{beds}</span>
+                      </li>
+                      <li>
+                        <span>
+                          <MdBed />
+                          Bathrooms
+                        </span>{" "}
+                        <span>{baths}</span>
+                      </li>
+                      <li>
+                        <span>
+                          <MdBed />
+                          Area (sq ft)
+                        </span>{" "}
+                        <span>4506</span>
+                      </li>
+                      <li>
+                        <span>
+                          <MdBed />
+                          Garages
+                        </span>{" "}
+                        <span>2</span>
+                      </li>
+                      <li>
+                        <span>
+                          <MdBed />
+                          Built Year
+                        </span>{" "}
+                        <span>2019</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="description-card">
+                  <div className="description-card__header">
+                    <h4>Description</h4>
+                  </div>
+                  <div className="description-card__body">
+                    <p>{description}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="description-sidebar">
+                  <div className="description-sidebar__header">
+                    <h4>Description</h4>
+                  </div>
+                  <div className="description-sidebar__body">hello</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
