@@ -60,10 +60,17 @@
       span {
         padding: 3px 8px;
         border-radius: 5px;
+        background-color: $color-primary;
+        color: $color-light;
+        font-size: 16px;
+        font-weight: 500;
       }
     }
     .location {
       margin-bottom: 0px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
     }
     span {
       font-size: 25px;
@@ -90,6 +97,20 @@
           display: grid;
           align-items: center;
           grid-template-columns: 1fr 1fr;
+          margin-bottom: 20px;
+          span {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+          }
+        }
+      }
+      &.features {
+        ul {
+          display: grid;
+          align-items: center;
+          grid-template-columns: 1fr 1fr;
+          margin-bottom: 20px;
           span {
             display: flex;
             gap: 15px;

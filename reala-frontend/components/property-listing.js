@@ -8,6 +8,7 @@ const PropertyListing = ({ data }) => {
         <SectionTitle title="Property Listing" />
         <div className="featured-listing__wrapper">
           <div className="row">
+            {data === null || undefined || 0 ? "Property not available" : ""}
             {data?.slice(0, 6).map((property) => (
               <PropertyCard property={property} key={property.id} />
             ))}
