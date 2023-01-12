@@ -7,9 +7,9 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <Navbar className="p-0" bg="none" expand="lg">
-          <a className="navbar-brand" href="/">
+          <Link className="navbar-brand" href="/">
             <h2 className="logo">Reala.</h2>
-          </a>
+          </Link>
           <Navbar.Toggle
             className="navbar-toggler collapsed"
             type="button"

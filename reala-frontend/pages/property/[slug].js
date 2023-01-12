@@ -203,7 +203,7 @@ const PropertyPage = ({ properties, slug }) => {
               <div className="col-md-4">
                 <div className="description-sidebar">
                   <div className="description-sidebar__header">
-                    <h4>Description</h4>
+                    <h4>Property Owner</h4>
                   </div>
                   <div className="description-sidebar__body">
                     <h4>{user.data.attributes.username}</h4>
