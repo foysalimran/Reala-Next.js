@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Navbar } from "react-bootstrap";
 import { MdOutlineMailOutline, MdCall } from "react-icons/md";
 
@@ -30,50 +31,50 @@ const Header = () => {
           >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <Link className="nav-link" href="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/all-property">
+                <Link className="nav-link" href="/all-property">
                   All Property
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" href="#">
                   Blog
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/contact">
+                <Link className="nav-link" href="/contact">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
             <ul className="navbar-nav navbar__right d-block d-lg-none">
               <li className="nav-item">
-                <a className="nav-link" href="mailto:admin@gmail.com">
+                <Link className="nav-link" href="mailto:admin@gmail.com">
                   <MdOutlineMailOutline /> admin@gmail.com
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="tel:0123456789">
+                <Link className="nav-link" href="tel:0123456789">
                   <MdCall /> 0123456789
-                </a>
+                </Link>
               </li>
             </ul>
           </Navbar.Collapse>
 
           <ul className="navbar-nav navbar__right d-none d-lg-flex gap-1 align-items-center">
             <li className="nav-item">
-              <a className="nav-link" href="mailto:admin@gmail.com">
+              <Link className="nav-link" href="mailto:admin@gmail.com">
                 <MdOutlineMailOutline /> admin@gmail.com
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="tel:0123456789">
+              <Link className="nav-link" href="tel:0123456789">
                 <MdCall /> 0123456789
-              </a>
+              </Link>
             </li>
           </ul>
         </Navbar>

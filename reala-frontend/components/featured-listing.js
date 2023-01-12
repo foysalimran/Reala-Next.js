@@ -27,14 +27,24 @@ const FeaturedListing = ({ data }) => {
           >
             <Tab eventKey="rent" title="Rent">
               <div className="row">
-                {propertyRent.slice(0, 3).map((property) => (
+                <span>
+                  {propertyRent === null || undefined || 0
+                    ? "property not available for rent"
+                    : ""}
+                </span>
+                {propertyRent?.slice(0, 3).map((property) => (
                   <PropertyCard property={property} key={property.id} />
                 ))}
               </div>
             </Tab>
             <Tab eventKey="sale" title="Sale">
               <div className="row">
-                {propertySale.slice(0, 3).map((property) => (
+                <span>
+                  {propertySale === null || undefined || 0
+                    ? "property not available for sale"
+                    : ""}
+                </span>
+                {propertySale?.slice(0, 3).map((property) => (
                   <PropertyCard property={property} key={property.id} />
                 ))}
               </div>

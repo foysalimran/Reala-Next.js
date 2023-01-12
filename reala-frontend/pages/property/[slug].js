@@ -15,7 +15,7 @@ import {
 } from "react-icons/md";
 
 const PropertyPage = ({ properties, slug }) => {
-  const property = properties.filter((data) => data?.attributes.slug === slug);
+  const property = properties?.filter((data) => data?.attributes.slug === slug);
 
   const {
     image,
@@ -56,7 +56,8 @@ const PropertyPage = ({ properties, slug }) => {
                 },
               }}
             >
-              {image.data.map((images) => (
+              {image.data === null ? "Image not available" : ""}
+              {image?.data.map((images) => (
                 <SwiperSlide key={images.id}>
                   {console.log(images)}
                   <img
@@ -158,7 +159,7 @@ const PropertyPage = ({ properties, slug }) => {
               <SectionTitle position="left" title="Similar Properties" />
               <div className="featured-listing__wrapper">
                 <div className="row">
-                  {properties.slice(0, 3).map((property) => (
+                  {properties?.slice(0, 3).map((property) => (
                     <PropertyCard property={property} key={property.id} />
                   ))}
                 </div>

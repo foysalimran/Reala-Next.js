@@ -26,7 +26,10 @@ const AllProperty = ({ property }) => {
               <div className="col-md-9">
                 <div className="row">
                   <AllPropertyNav setView={setView} view={view} data={data} />
-                  {data.map((property) =>
+                  {data === null || undefined || 0
+                    ? "Property not available"
+                    : ""}
+                  {data?.map((property) =>
                     view ? (
                       <div key={property.id} className="col-12 mb-4">
                         <div className="list-view">
