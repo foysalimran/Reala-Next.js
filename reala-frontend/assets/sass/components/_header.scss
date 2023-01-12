@@ -4,9 +4,9 @@
 .header .navbar-nav > .nav-item > .nav-link {
   &:not(.active) {
     &:after {
-      left: 0;
+      left: 10%;
       bottom: 0;
-      width: 100%;
+      width: 80%;
       height: 4px;
       z-index: -7;
       content: "";

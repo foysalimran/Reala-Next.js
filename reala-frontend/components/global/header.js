@@ -1,4 +1,5 @@
 import { Navbar } from "react-bootstrap";
+import { MdOutlineMailOutline, MdCall } from "react-icons/md";
 
 const Header = () => {
   return (
@@ -52,26 +53,26 @@ const Header = () => {
             <ul className="navbar-nav navbar__right d-block d-lg-none">
               <li className="nav-item">
                 <a className="nav-link" href="mailto:admin@gmail.com">
-                  admin@gmail.com
+                  <MdOutlineMailOutline /> admin@gmail.com
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="tel:0123456789">
-                  0123456789
+                  <MdCall /> 0123456789
                 </a>
               </li>
             </ul>
           </Navbar.Collapse>
 
-          <ul className="navbar-nav navbar__right d-none d-lg-flex align-items-center">
+          <ul className="navbar-nav navbar__right d-none d-lg-flex gap-1 align-items-center">
             <li className="nav-item">
               <a className="nav-link" href="mailto:admin@gmail.com">
-                admin@gmail.com
+                <MdOutlineMailOutline /> admin@gmail.com
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="tel:0123456789">
-                0123456789
+                <MdCall /> 0123456789
               </a>
             </li>
           </ul>
