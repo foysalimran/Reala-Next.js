@@ -1,10 +1,15 @@
 import React from "react";
 
-const Sidebar = ({ data }) => {
+const Sidebar = ({ data, searchProperty }) => {
   return (
     <div className="filter">
       <form>
-        <input placeholder="Search" type="text" />
+        <input
+          id="search-input"
+          onKeyUp={searchProperty}
+          placeholder="Search"
+          type="text"
+        />
       </form>
       <div className="filter__category">
         <h3>Category</h3>

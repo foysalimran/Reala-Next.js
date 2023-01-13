@@ -15,9 +15,15 @@ import {
 } from "react-icons/md";
 import { GiBathtub, GiMechanicGarage } from "react-icons/gi";
 import { AiOutlineHome } from "react-icons/ai";
-import { FaVoteYea } from "react-icons/fa";
 import { BsCheckCircle } from "react-icons/bs";
 import { GoLocation } from "react-icons/go";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaWhatsapp,
+  FaVoteYea,
+} from "react-icons/fa";
 
 const PropertyPage = ({ properties, slug }) => {
   const property = properties?.filter((data) => data?.attributes.slug === slug);
@@ -33,7 +39,7 @@ const PropertyPage = ({ properties, slug }) => {
     phone,
     beds,
     baths,
-    user
+    user,
   } = property[0]?.attributes;
 
   return (
@@ -65,7 +71,6 @@ const PropertyPage = ({ properties, slug }) => {
               {image.data === null ? "Image not available" : ""}
               {image?.data.map((images) => (
                 <SwiperSlide key={images.id}>
-                  {console.log(images)}
                   <img
                     className="img-fluid"
                     src={`${API_URL}${images.attributes.url}`}
@@ -206,8 +211,32 @@ const PropertyPage = ({ properties, slug }) => {
                     <h4>Property Owner</h4>
                   </div>
                   <div className="description-sidebar__body">
-                    <h4>{user.data.attributes.username}</h4>
+                    <h4 className="username">
+                      {user.data.attributes.username}
+                    </h4>
                     <p>{user.data.attributes.email}</p>
+                    <ul>
+                      <li>
+                        <a href="https://www.facebook.com" className="icon">
+                          <FaFacebookF />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.twitter.com" className="icon">
+                          <FaTwitter />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.instagram.com" className="icon">
+                          <FaInstagram />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="tel:+880123456789" className="icon">
+                          <FaWhatsapp />
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>

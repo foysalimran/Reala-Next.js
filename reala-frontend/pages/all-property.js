@@ -13,6 +13,25 @@ const AllProperty = ({ property }) => {
   const { data } = property;
   const [view, setView] = useState(false);
 
+  const searchProperty = () => {
+    var searchKeyword, i, txtValue;
+    let input = document.getElementById("search-input");
+    let filter = input.value.toUpperCase();
+    let allProperty = document.getElementById("property-list");
+    let property = allProperty.getElementsByClassName("property");
+
+    for (i = 0; i < property.length; i++) {
+      searchKeyword = property[i].getElementsByClassName("property-name")[0];
+      txtValue = searchKeyword.textContent || searchKeyword.innerText;
+
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        property[i].style.display = "";
+      } else {
+        property[i].style.display = "none";
+      }
+    }
+  };
+
   return (
     <Layout>
       <div className="all-property featured-list section-padding">
@@ -21,17 +40,17 @@ const AllProperty = ({ property }) => {
           <div className="featured-listing__wrapper">
             <div className="row">
               <div className="col-md-3">
-                <Sidebar data={data} />
+                <Sidebar searchProperty={searchProperty} data={data} />
               </div>
               <div className="col-md-9">
-                <div className="row">
+                <div className="row" id="property-list">
                   <AllPropertyNav setView={setView} view={view} data={data} />
                   {data === null || undefined || 0
                     ? "Property not available"
                     : ""}
                   {data?.map((property) =>
                     view ? (
-                      <div key={property.id} className="col-12 mb-4">
+                      <div key={property.id} className="property col-12 mb-4">
                         <div className="list-view">
                           <div className="row">
                             <div className="col-md-5">
@@ -55,7 +74,9 @@ const AllProperty = ({ property }) => {
                               <div className="list-view__info">
                                 <div className="list-view__info--title">
                                   <h3>
-                                    <a href="#">{property.attributes.title}</a>
+                                    <a className="property-name" href="#">
+                                      {property.attributes.title}
+                                    </a>
                                   </h3>
                                 </div>
                                 <div className="list-view__info--price">
@@ -98,7 +119,7 @@ const AllProperty = ({ property }) => {
                         </div>
                       </div>
                     ) : (
-                      <div key={property.id} className="col-md-6 mb-4">
+                      <div key={property.id} className="property col-md-6 mb-4">
                         <div className="featured-list__item">
                           <div className="featured-list__item--image">
                             <img
@@ -118,7 +139,9 @@ const AllProperty = ({ property }) => {
                           <div className="featured-list__item__info">
                             <div className="featured-list__item__info--title">
                               <h3>
-                                <a href="#">{property.attributes.title}</a>
+                                <a className="property-name" href="#">
+                                  {property.attributes.title}
+                                </a>
                               </h3>
                             </div>
                             <div className="featured-list__item__info--ratting">
