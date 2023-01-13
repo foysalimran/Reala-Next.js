@@ -1,4 +1,13 @@
 .contact {
+  &__header {
+    text-align: center;
+    p {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 0px;
+    }
+  }
   &__info {
     padding: 20px;
     border-radius: 5px;
@@ -12,7 +21,7 @@
     }
   }
   form {
-    padding: 15px;
+    padding: 20px;
     border-radius: 5px;
     border: 1px solid $color-border;
 
@@ -39,7 +48,7 @@
       margin-bottom: 15px;
     }
     button {
-        width: 100%;
+      width: 100%;
     }
   }
 }
