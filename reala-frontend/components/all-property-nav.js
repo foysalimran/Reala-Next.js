@@ -2,8 +2,6 @@ import { BsFillGridFill } from "react-icons/bs";
 import { HiViewList } from "react-icons/hi";
 
 const AllPropertyNav = ({ data, setView, view }) => {
-
-
   return (
     <div className="col-12">
       <div className="property-nav">
@@ -22,7 +20,11 @@ const AllPropertyNav = ({ data, setView, view }) => {
             <HiViewList className="icon" />
           </button>
         </div>
-        <p>{data.length} Product Available</p>
+        <p>
+          {data === null || undefined
+            ? "Product Not Available"
+            : `${data.length} Product Available`}
+        </p>
 
         <div className="sort-selection">
           <form action="#">
