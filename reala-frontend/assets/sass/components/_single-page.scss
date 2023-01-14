@@ -59,22 +59,25 @@
       font-size: 25px;
       span {
         padding: 3px 8px;
-        border-radius: 5px;
         background-color: $color-primary;
         color: $color-light;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 500;
       }
     }
-    .location {
-      margin-bottom: 0px;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-    span {
+    .price {
       font-size: 25px;
       font-weight: 600;
+      margin-bottom: 10px;
+    }
+    ul {
+      margin-top: 5px;
+      li {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 5px;
+      }
     }
   }
   .description-card {
@@ -141,6 +144,9 @@
       padding: 20px;
       .username {
         font-size: 18px;
+      }
+      p {
+        margin-bottom: 20px;
       }
       ul {
         display: flex;

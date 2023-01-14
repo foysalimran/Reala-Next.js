@@ -14,7 +14,7 @@ import {
   MdOutlineNavigateNext,
 } from "react-icons/md";
 import { GiBathtub, GiMechanicGarage } from "react-icons/gi";
-import { AiOutlineHome } from "react-icons/ai";
+import { AiFillStar, AiOutlineHome } from "react-icons/ai";
 import { BsCheckCircle } from "react-icons/bs";
 import { GoLocation } from "react-icons/go";
 import {
@@ -40,10 +40,12 @@ const PropertyPage = ({ properties, slug }) => {
     beds,
     baths,
     user,
+    propertyFeature,
+    propertyType,
   } = property[0]?.attributes;
 
   return (
-    <Layout>
+    <Layout title={title}>
       <div className="single-page">
         <div className="rwo">
           <div className="col-12">
@@ -90,12 +92,18 @@ const PropertyPage = ({ properties, slug }) => {
         <div className="container">
           <div className="single-page__top">
             <h3>
-              {title} <span>Popular</span>
+              {title} <span>{propertyType}</span>
             </h3>
-            <p className="location">
-              <GoLocation /> {location}
-            </p>
             <span className="price">${price}</span>
+            <ul>
+              <li>
+                <GoLocation /> {location}
+              </li>
+              <li>
+                <AiFillStar />
+                {rating}
+              </li>
+            </ul>
           </div>
         </div>
         <div className="section-bg section-padding">
@@ -161,46 +169,13 @@ const PropertyPage = ({ properties, slug }) => {
                   </div>
                   <div className="description-card__body features">
                     <ul>
-                      <li>
-                        <span>
-                          <BsCheckCircle /> Air Conditioning
-                        </span>
-                      </li>
-                      <li>
-                        <span>
-                          <BsCheckCircle /> Dishwasher
-                        </span>
-                      </li>
-                      <li>
-                        <span>
-                          <BsCheckCircle /> Internet
-                        </span>
-                      </li>
-                      <li>
-                        <span>
-                          <BsCheckCircle /> School
-                        </span>
-                      </li>
-                      <li>
-                        <span>
-                          <BsCheckCircle /> Built-In Wardrobes
-                        </span>
-                      </li>
-                      <li>
-                        <span>
-                          <BsCheckCircle /> Swimming Pool
-                        </span>
-                      </li>
-                      <li>
-                        <span>
-                          <BsCheckCircle /> Supermarket/Store
-                        </span>
-                      </li>
-                      <li>
-                        <span>
-                          <BsCheckCircle /> Floor Coverings
-                        </span>
-                      </li>
+                      {propertyFeature.map((features) => (
+                        <li>
+                          <span>
+                            <BsCheckCircle /> {features.feature}
+                          </span>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -214,25 +189,35 @@ const PropertyPage = ({ properties, slug }) => {
                     <h4 className="username">
                       {user.data.attributes.username}
                     </h4>
+                    <p className="mb-0">{user.data.attributes.whatsApp}</p>
                     <p>{user.data.attributes.email}</p>
                     <ul>
                       <li>
-                        <a href="https://www.facebook.com" className="icon">
+                        <a
+                          href={user.data.attributes.facebook}
+                          className="icon"
+                        >
                           <FaFacebookF />
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.twitter.com" className="icon">
+                        <a href={user.data.attributes.twitter} className="icon">
                           <FaTwitter />
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.instagram.com" className="icon">
+                        <a
+                          href={user.data.attributes.instagram}
+                          className="icon"
+                        >
                           <FaInstagram />
                         </a>
                       </li>
                       <li>
-                        <a href="tel:+880123456789" className="icon">
+                        <a
+                          href={`tel:${user.data.attributes.whatsApp}`}
+                          className="icon"
+                        >
                           <FaWhatsapp />
                         </a>
                       </li>

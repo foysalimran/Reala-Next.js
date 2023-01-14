@@ -81,11 +81,14 @@
       ],
       "default": "none"
     },
-    "propertyfeature": {
+    "propertyFeature": {
       "displayName": "propertyFeature",
       "type": "component",
       "repeatable": true,
       "component": "property-feature.property-feature"
+    },
+    "date": {
+      "type": "date"
     }
   }
 }
