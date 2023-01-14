@@ -5,6 +5,7 @@ import { API_URL } from "../config";
 import AllPropertyNav from "../components/all-property-nav";
 import PropertyCard from "../components/property-card";
 import ProductListCard from "../components/product-list-card";
+import InnerPageLayout from "../components/inner-page-layout";
 
 const AllProperty = ({ property }) => {
   const { data } = property;
@@ -42,6 +43,7 @@ const AllProperty = ({ property }) => {
 
   return (
     <Layout>
+      <InnerPageLayout title="All Property" />
       <div className="all-property featured-list section-padding">
         <div className="container">
           <AllPropertyNav
@@ -95,9 +97,7 @@ const AllProperty = ({ property }) => {
                 <Tab eventKey="all" title="All">
                   <div className="row">
                     {data === null || undefined || 0 ? (
-                      <span className="error">
-                        Property not available
-                      </span>
+                      <span className="error">Property not available</span>
                     ) : null}
                     {data?.map((property) => (
                       <PropertyCard property={property} key={property.id} />

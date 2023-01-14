@@ -240,3 +240,28 @@ ul {
   padding: 30px 0;
   text-align: center;
 }
+
+.inner-page {
+  background-color: $color-tertiary;
+  text-align: center;
+  text-transform: capitalize;
+  color: $color-dark;
+  h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: $color-primary;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}

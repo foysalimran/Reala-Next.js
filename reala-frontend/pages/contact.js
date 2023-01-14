@@ -1,16 +1,12 @@
 import React from "react";
 import Layout from "../components/global/layout";
+import InnerPageLayout from "../components/inner-page-layout";
 
 const Contact = () => {
   return (
     <Layout>
+      <InnerPageLayout title="Need Instant Help?" />
       <div className="contact">
-        <div className="contact__header section-bg section-padding">
-          <div className="container">
-            <p>Contact us</p>
-            <h1>Need Instant Help?</h1>
-          </div>
-        </div>
         <div className="section-padding">
           <div className="container">
             <div className="row">
