@@ -6,11 +6,15 @@ import PropertyCard from "./property-card";
 const FeaturedListing = ({ data }) => {
   const [key, setKey] = useState("rent");
 
-  const propertyRent = data?.filter(
+  const featured = data?.filter(
+    (property) => property.attributes.propertyType === "featured"
+  );
+
+  const propertyRent = featured?.filter(
     (property) =>
       property.attributes.categories.data[0].attributes.categoryname === "rent"
   );
-  const propertySale = data?.filter(
+  const propertySale = featured?.filter(
     (property) =>
       property.attributes.categories.data[0].attributes.categoryname === "sale"
   );
@@ -26,7 +30,7 @@ const FeaturedListing = ({ data }) => {
             onSelect={(k) => setKey(k)}
           >
             <Tab eventKey="rent" title="Rent">
-              <div className="row">
+              <div className="row justify-content-center">
                 {data === null || undefined || 0 ? (
                   <span className="error">property not available for rent</span>
                 ) : null}
@@ -36,7 +40,7 @@ const FeaturedListing = ({ data }) => {
               </div>
             </Tab>
             <Tab eventKey="sale" title="Sale">
-              <div className="row">
+              <div className="row justify-content-center">
                 {data === null || undefined || 0 ? (
                   <span className="error">property not available for sale</span>
                 ) : null}

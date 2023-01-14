@@ -17,7 +17,9 @@ const ProductListCard = ({ property }) => {
     phone,
     beds,
     baths,
+    propertyType,
   } = property.attributes;
+
   return (
     <>
       <div className="property col-12 mb-4">
@@ -34,7 +36,9 @@ const ProductListCard = ({ property }) => {
                   }
                   alt={title}
                 />
-                <div className="popular">Popular</div>
+                {propertyType !== null && (
+                  <div className="popular">{propertyType}</div>
+                )}
                 <div className="type">{property.attributes.type}</div>
               </div>
             </div>

@@ -262,6 +262,13 @@ ul {
       color: $color-primary;
       font-size: 18px;
       font-weight: 500;
+      a {
+        color: $color-dark;
+        transition: all 0.5s;
+        &:hover {
+          color: $color-primary;
+        }
+      }
     }
   }
 }

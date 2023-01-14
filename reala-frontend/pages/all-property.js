@@ -57,11 +57,9 @@ const AllProperty = ({ property }) => {
               <Tabs activeKey={key} onSelect={(k) => setKey(k)}>
                 <Tab id="controlled-tab-example" eventKey="all" title="All">
                   <div className="row">
-                    <span className="error">
-                      {data === null || undefined || 0
-                        ? "Property not available"
-                        : ""}
-                    </span>
+                    {data === null && (
+                      <span className="error">Property not available</span>
+                    )}
                     {data?.map((property) => (
                       <ProductListCard property={property} key={property.id} />
                     ))}
@@ -69,11 +67,9 @@ const AllProperty = ({ property }) => {
                 </Tab>
                 <Tab eventKey="rent" title="Rent">
                   <div className="row">
-                    <span className="error">
-                      {data === null || undefined || 0
-                        ? "Property not available for rent"
-                        : ""}
-                    </span>
+                    {data === null && (
+                      <span className="error">Property not available</span>
+                    )}
                     {propertyRent?.map((property) => (
                       <ProductListCard property={property} key={property.id} />
                     ))}
@@ -82,9 +78,11 @@ const AllProperty = ({ property }) => {
                 <Tab eventKey="sale" title="Sale">
                   <div className="row">
                     <span className="error">
-                      {data === null || undefined || 0
-                        ? "Property not available for sale"
-                        : ""}
+                      {data === null && (
+                        <span className="error">
+                          Property not available for sale
+                        </span>
+                      )}
                     </span>
                     {propertySale?.map((property) => (
                       <ProductListCard property={property} key={property.id} />

@@ -17,6 +17,7 @@ const PropertyCard = ({ property }) => {
     phone,
     beds,
     baths,
+    propertyType,
   } = property.attributes;
   return (
     <div className="col-md-6 col-lg-4 mb-4 property">
@@ -31,13 +32,17 @@ const PropertyCard = ({ property }) => {
             }
             alt={title}
           />
-          <div className="popular">Popular</div>
+          {propertyType !== null && (
+            <div className="popular">{propertyType}</div>
+          )}
           <div className="price">${price} / month</div>
         </div>
         <div className="featured-list__item__info">
           <div className="featured-list__item__info--title">
             <h3>
-              <Link className="property-name" href={`/property/${slug}`}>{title}</Link>
+              <Link className="property-name" href={`/property/${slug}`}>
+                {title}
+              </Link>
             </h3>
           </div>
           <div className="featured-list__item__info--ratting">
