@@ -5,7 +5,7 @@ import PropertyCard from "./property-card";
 
 const FeaturedListing = ({ data }) => {
   const [key, setKey] = useState("rent");
-  console.log("data", data);
+
   const propertyRent = data?.filter(
     (property) =>
       property.attributes.categories.data[0].attributes.categoryname === "rent"

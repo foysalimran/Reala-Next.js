@@ -19,7 +19,7 @@ const PropertyCard = ({ property }) => {
     baths,
   } = property.attributes;
   return (
-    <div className="col-md-6 col-lg-4 mb-4">
+    <div className="col-md-6 col-lg-4 mb-4 property">
       <div className="featured-list__item">
         <div className="featured-list__item--image">
           <img
@@ -37,7 +37,7 @@ const PropertyCard = ({ property }) => {
         <div className="featured-list__item__info">
           <div className="featured-list__item__info--title">
             <h3>
-              <Link href={`/property/${slug}`}>{title}</Link>
+              <Link className="property-name" href={`/property/${slug}`}>{title}</Link>
             </h3>
           </div>
           <div className="featured-list__item__info--ratting">

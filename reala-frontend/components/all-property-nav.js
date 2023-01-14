@@ -1,7 +1,7 @@
 import { BsFillGridFill } from "react-icons/bs";
 import { HiViewList } from "react-icons/hi";
 
-const AllPropertyNav = ({ data, setView, view }) => {
+const AllPropertyNav = ({ data, setView, view, searchProperty }) => {
   return (
     <div className="col-12">
       <div className="property-nav">
@@ -27,14 +27,13 @@ const AllPropertyNav = ({ data, setView, view }) => {
         </p>
 
         <div className="sort-selection">
-          <form action="#">
-            <label htmlFor="sort"></label>
-            <select name="sort" id="sort" className="sort-selection--style">
-              <option value="lowest">Price(lowest)</option>
-              <option value="highest">Price(highest)</option>
-              <option value="a-z">(a-z)</option>
-              <option value="z-a">(z-a)</option>
-            </select>
+          <form>
+            <input
+              id="search-input"
+              onKeyUp={searchProperty}
+              placeholder="Search"
+              type="text"
+            />
           </form>
         </div>
       </div>
