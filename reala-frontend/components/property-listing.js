@@ -8,9 +8,9 @@ const PropertyListing = ({ data }) => {
         <SectionTitle title="Property Listing" />
         <div className="featured-listing__wrapper">
           <div className="row">
-            <span className="error">
-              {data === null || undefined || 0 ? "Property not available" : ""}
-            </span>
+            {data === null || undefined || 0 ? (
+              <span className="error">Property not available</span>
+            ) : null}
             {data?.slice(0, 6).map((property) => (
               <PropertyCard property={property} key={property.id} />
             ))}

@@ -1,15 +1,10 @@
 import { useState } from "react";
 import { Tab, Tabs } from "react-bootstrap";
 import Layout from "../components/global/layout";
-import SectionTitle from "../components/global/section-title";
-import { AiFillStar, AiOutlineHome } from "react-icons/ai";
-import { GoLocation } from "react-icons/go";
-import { GiBathtub } from "react-icons/gi";
-import { MdBed, MdCall } from "react-icons/md";
 import { API_URL } from "../config";
 import AllPropertyNav from "../components/all-property-nav";
-import Sidebar from "../components/sidebar";
 import PropertyCard from "../components/property-card";
+import ProductListCard from "../components/product-list-card";
 
 const AllProperty = ({ property }) => {
   const { data } = property;
@@ -55,85 +50,18 @@ const AllProperty = ({ property }) => {
             view={view}
             data={data}
           />
-          {view ? (
-            <div id="property-list">
+          <div id="property-list">
+            {view ? (
               <Tabs activeKey={key} onSelect={(k) => setKey(k)}>
-                <Tab eventKey="all" title="All">
+                <Tab id="controlled-tab-example" eventKey="all" title="All">
                   <div className="row">
                     <span className="error">
                       {data === null || undefined || 0
-                        ? "Property not available for rent or Sale"
+                        ? "Property not available"
                         : ""}
                     </span>
                     {data?.map((property) => (
-                      <div key={property.id} className="property col-12 mb-4">
-                        <div className="list-view">
-                          <div className="row">
-                            <div className="col-md-5">
-                              <div className="list-view--image h-100">
-                                <img
-                                  className="img-fluid"
-                                  src={
-                                    property?.attributes.image?.data !== null
-                                      ? `${API_URL}${property?.attributes.image?.data[0]?.attributes.url}`
-                                      : "/images/404.jpg"
-                                  }
-                                  alt={property.attributes.title}
-                                />
-                                <div className="popular">Popular</div>
-                                <div className="type">
-                                  {property.attributes.type}
-                                </div>
-                              </div>
-                            </div>
-                            <div className="col-md-7 col-lg-6 offset-lg-1">
-                              <div className="list-view__info">
-                                <div className="list-view__info--title">
-                                  <h3>
-                                    <a className="property-name" href="#">
-                                      {property.attributes.title}
-                                    </a>
-                                  </h3>
-                                </div>
-                                <div className="list-view__info--price">
-                                  ${property?.attributes.price} / month
-                                </div>
-                                <div className="list-view__info--ratting">
-                                  <span>
-                                    <AiFillStar />
-                                    {property.attributes.rating}
-                                  </span>{" "}
-                                  5 reviews
-                                </div>
-                                <ul className="list-view__info--list">
-                                  <li>
-                                    <GoLocation />{" "}
-                                    {property.attributes.location}
-                                  </li>
-                                  <li>
-                                    <MdCall />{" "}
-                                    <a href={`tel${property.attributes.phone}`}>
-                                      {property.attributes.phone}
-                                    </a>
-                                  </li>
-                                </ul>
-                                <ul className="list-view__info--expert">
-                                  <li>
-                                    <MdBed /> {property.attributes.beds} Beds
-                                  </li>
-                                  <li>
-                                    <GiBathtub /> {property.attributes.baths}{" "}
-                                    Baths
-                                  </li>
-                                  <li>
-                                    <AiOutlineHome /> 6,541 sqft
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <ProductListCard property={property} key={property.id} />
                     ))}
                   </div>
                 </Tab>
@@ -145,74 +73,7 @@ const AllProperty = ({ property }) => {
                         : ""}
                     </span>
                     {propertyRent?.map((property) => (
-                      <div key={property.id} className="property col-12 mb-4">
-                        <div className="list-view">
-                          <div className="row">
-                            <div className="col-md-5">
-                              <div className="list-view--image h-100">
-                                <img
-                                  className="img-fluid"
-                                  src={
-                                    property?.attributes.image?.data !== null
-                                      ? `${API_URL}${property?.attributes.image?.data[0]?.attributes.url}`
-                                      : "/images/404.jpg"
-                                  }
-                                  alt={property.attributes.title}
-                                />
-                                <div className="popular">Popular</div>
-                                <div className="type">
-                                  {property.attributes.type}
-                                </div>
-                              </div>
-                            </div>
-                            <div className="col-md-7 col-lg-6 offset-lg-1">
-                              <div className="list-view__info">
-                                <div className="list-view__info--title">
-                                  <h3>
-                                    <a className="property-name" href="#">
-                                      {property.attributes.title}
-                                    </a>
-                                  </h3>
-                                </div>
-                                <div className="list-view__info--price">
-                                  ${property?.attributes.price} / month
-                                </div>
-                                <div className="list-view__info--ratting">
-                                  <span>
-                                    <AiFillStar />
-                                    {property.attributes.rating}
-                                  </span>{" "}
-                                  5 reviews
-                                </div>
-                                <ul className="list-view__info--list">
-                                  <li>
-                                    <GoLocation />{" "}
-                                    {property.attributes.location}
-                                  </li>
-                                  <li>
-                                    <MdCall />{" "}
-                                    <a href={`tel${property.attributes.phone}`}>
-                                      {property.attributes.phone}
-                                    </a>
-                                  </li>
-                                </ul>
-                                <ul className="list-view__info--expert">
-                                  <li>
-                                    <MdBed /> {property.attributes.beds} Beds
-                                  </li>
-                                  <li>
-                                    <GiBathtub /> {property.attributes.baths}{" "}
-                                    Baths
-                                  </li>
-                                  <li>
-                                    <AiOutlineHome /> 6,541 sqft
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <ProductListCard property={property} key={property.id} />
                     ))}
                   </div>
                 </Tab>
@@ -224,89 +85,20 @@ const AllProperty = ({ property }) => {
                         : ""}
                     </span>
                     {propertySale?.map((property) => (
-                      <div key={property.id} className="property col-12 mb-4">
-                        <div className="list-view">
-                          <div className="row">
-                            <div className="col-md-5">
-                              <div className="list-view--image h-100">
-                                <img
-                                  className="img-fluid"
-                                  src={
-                                    property?.attributes.image?.data !== null
-                                      ? `${API_URL}${property?.attributes.image?.data[0]?.attributes.url}`
-                                      : "/images/404.jpg"
-                                  }
-                                  alt={property.attributes.title}
-                                />
-                                <div className="popular">Popular</div>
-                                <div className="type">
-                                  {property.attributes.type}
-                                </div>
-                              </div>
-                            </div>
-                            <div className="col-md-7 col-lg-6 offset-lg-1">
-                              <div className="list-view__info">
-                                <div className="list-view__info--title">
-                                  <h3>
-                                    <a className="property-name" href="#">
-                                      {property.attributes.title}
-                                    </a>
-                                  </h3>
-                                </div>
-                                <div className="list-view__info--price">
-                                  ${property?.attributes.price} / month
-                                </div>
-                                <div className="list-view__info--ratting">
-                                  <span>
-                                    <AiFillStar />
-                                    {property.attributes.rating}
-                                  </span>{" "}
-                                  5 reviews
-                                </div>
-                                <ul className="list-view__info--list">
-                                  <li>
-                                    <GoLocation />{" "}
-                                    {property.attributes.location}
-                                  </li>
-                                  <li>
-                                    <MdCall />{" "}
-                                    <a href={`tel${property.attributes.phone}`}>
-                                      {property.attributes.phone}
-                                    </a>
-                                  </li>
-                                </ul>
-                                <ul className="list-view__info--expert">
-                                  <li>
-                                    <MdBed /> {property.attributes.beds} Beds
-                                  </li>
-                                  <li>
-                                    <GiBathtub /> {property.attributes.baths}{" "}
-                                    Baths
-                                  </li>
-                                  <li>
-                                    <AiOutlineHome /> 6,541 sqft
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <ProductListCard property={property} key={property.id} />
                     ))}
                   </div>
                 </Tab>
               </Tabs>
-            </div>
-          ) : (
-            <div id="property-list">
+            ) : (
               <Tabs activeKey={key} onSelect={(k) => setKey(k)}>
                 <Tab eventKey="all" title="All">
                   <div className="row">
-                    <span className="error">
-                      {data === null || undefined || 0
-                        ? "Property not available for rent or Sale"
-                        : ""}
-                    </span>
+                    {data === null || undefined || 0 ? (
+                      <span className="error">
+                        Property not available
+                      </span>
+                    ) : null}
                     {data?.map((property) => (
                       <PropertyCard property={property} key={property.id} />
                     ))}
@@ -314,11 +106,11 @@ const AllProperty = ({ property }) => {
                 </Tab>
                 <Tab eventKey="rent" title="Rent">
                   <div className="row">
-                    <span className="error">
-                      {data === null || undefined || 0
-                        ? "Property not available for rent"
-                        : ""}
-                    </span>
+                    {data === null || undefined || 0 ? (
+                      <span className="error">
+                        Property not available for rent
+                      </span>
+                    ) : null}
                     {propertyRent?.map((property) => (
                       <PropertyCard property={property} key={property.id} />
                     ))}
@@ -326,19 +118,19 @@ const AllProperty = ({ property }) => {
                 </Tab>
                 <Tab eventKey="sale" title="Sale">
                   <div className="row">
-                    <span className="error">
-                      {data === null || undefined || 0
-                        ? "Property not available for sale"
-                        : ""}
-                    </span>
+                    {data === null || undefined || 0 ? (
+                      <span className="error">
+                        Property not available for Sale
+                      </span>
+                    ) : null}
                     {propertySale?.map((property) => (
                       <PropertyCard property={property} key={property.id} />
                     ))}
                   </div>
                 </Tab>
               </Tabs>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </Layout>

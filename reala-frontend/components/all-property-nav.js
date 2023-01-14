@@ -20,11 +20,6 @@ const AllPropertyNav = ({ data, setView, view, searchProperty }) => {
             <HiViewList className="icon" />
           </button>
         </div>
-        <p>
-          {data === null || undefined
-            ? "Product Not Available"
-            : `${data.length} Product Available`}
-        </p>
 
         <div className="sort-selection">
           <form>
