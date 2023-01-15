@@ -183,6 +183,29 @@ const SingleBlog = ({ blogs, slug }) => {
                     </div>
                   </div>
                 </div>
+                <div className="content__respond">
+                  <h3 className="content__respond__title">Leave a Reply</h3>
+                  <form className="row">
+                    <div className="col-12">
+                      <div className="row">
+                        <div className="col-lg-6">
+                          <input type="text" placeholder="Name *" />
+                        </div>
+                        <div className="col-lg-6">
+                          <input type="text" placeholder="Email *" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-12">
+                      <textarea rows="5" placeholder="Message *"></textarea>
+                    </div>
+                    <div className="col-12">
+                      <button className="button-primary w-100">
+                        Post Comment
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>

@@ -159,6 +159,30 @@
               }
             }
           }
+          &__respond {
+            border: 1px solid $color-border;
+            margin-top: 50px;
+            padding: 40px 30px;
+            clear: both;
+            border-radius: 5px;
+            &__title {
+              margin-bottom: 10px;
+              font-size: 22px;
+            }
+            input, textarea {
+              width: 100%;
+              margin-bottom: 30px;
+              padding: 5px 15px;
+              border-radius: 5px;
+              border: 1px solid $color-border;
+              transition: all 0.5s;
+              &:hover,
+              &:focus {
+                border: 1px solid $color-primary;
+                outline: none;
+              }
+            }
+          }
         }
       }
     }
