@@ -82,40 +82,103 @@ const SingleBlog = ({ blogs, slug }) => {
                 <div className="content__related">
                   <div className="row">
                     {blogs.slice(0, 2).map((blog) => (
-                      <RelatedBlog blog={blog} />
+                      <RelatedBlog blog={blog} key={blog.id} />
                     ))}
                   </div>
                 </div>
-                <div className="content__comment">
-                  <div className="content__comment__single">
-                    <div className="content__comment__single--image">
-                      <img src="/images/user1.jpg" alt="" />
-                    </div>
-                    <div className="content__comment__single--info">
-                      <div className="user">
-                        <h6>Mahamudul Hasan</h6>
-                        <p>November 2, 2022</p>
+                <div className="comment-area">
+                  <div className="content__comment">
+                    <div className="content__comment__single">
+                      <div className="content__comment__single--image">
+                        <img src="/images/user1.jpg" alt="" />
                       </div>
-                      <div className="reply">
-                        <button>
-                          <VscReply /> Reply
-                        </button>
+                      <div className="content__comment__single--area">
+                        <div className="content__comment__single--info">
+                          <div className="user">
+                            <h6>Mahamudul Hasan</h6>
+                            <p>November 2, 2022</p>
+                          </div>
+                          <div className="reply">
+                            <button>
+                              <VscReply /> Reply
+                            </button>
+                          </div>
+                        </div>
+                        <div className="comment">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing.
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="content__comment__single">
-                    <div className="content__comment__single--image">
-                      <img src="/images/user2.jpg" alt="" />
-                    </div>
-                    <div className="content__comment__single--info">
-                      <div className="user">
-                        <h6>Mahamudul Hasan</h6>
-                        <p>November 2, 2022</p>
+                    <div className="content__comment__single">
+                      <div className="content__comment__single--image">
+                        <img src="/images/user2.jpg" alt="" />
                       </div>
-                      <div className="reply">
-                        <button>
-                          <VscReply /> Reply
-                        </button>
+                      <div className="content__comment__single--area">
+                        <div className="content__comment__single--info">
+                          <div className="user">
+                            <h6>Mahamudul Hasan</h6>
+                            <p>November 2, 2022</p>
+                          </div>
+                          <div className="reply">
+                            <button>
+                              <VscReply /> Reply
+                            </button>
+                          </div>
+                        </div>
+                        <div className="comment">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Doloribus voluptatibus blanditiis facilis.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content__comment__single">
+                      <div className="content__comment__single--image">
+                        <img src="/images/user3.jpg" alt="" />
+                      </div>
+                      <div className="content__comment__single--area">
+                        <div className="content__comment__single--info">
+                          <div className="user">
+                            <h6>Mahamudul Hasan</h6>
+                            <p>November 2, 2022</p>
+                          </div>
+                          <div className="reply">
+                            <button>
+                              <VscReply /> Reply
+                            </button>
+                          </div>
+                        </div>
+                        <div className="comment">
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Blanditiis cumque fuga modi soluta iure eum
+                            fugit distinctio odio, placeat dolorem.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="ps-5 content__comment__single">
+                      <div className="content__comment__single--image">
+                        <img src="/images/user4.jpg" alt="" />
+                      </div>
+                      <div className="content__comment__single--area">
+                        <div className="content__comment__single--info">
+                          <div className="user">
+                            <h6>Mahamudul Hasan</h6>
+                            <p>November 2, 2022</p>
+                          </div>
+                          <div className="reply">
+                            <button>
+                              <VscReply /> Reply
+                            </button>
+                          </div>
+                        </div>
+                        <div className="comment">
+                          <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
                       </div>
                     </div>
                   </div>

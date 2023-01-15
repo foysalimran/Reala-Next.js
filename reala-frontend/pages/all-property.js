@@ -6,6 +6,7 @@ import AllPropertyNav from "../components/all-property-nav";
 import PropertyCard from "../components/property-card";
 import ProductListCard from "../components/product-list-card";
 import InnerPageLayout from "../components/inner-page-layout";
+import Pagination from "../components/pagingation";
 
 const AllProperty = ({ property }) => {
   const { data } = property;
@@ -41,6 +42,15 @@ const AllProperty = ({ property }) => {
       property.attributes.categories.data[0].attributes.categoryname === "sale"
   );
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(6);
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const propertyData = data.slice(indexOfFirstPost, indexOfLastPost);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <Layout>
       <InnerPageLayout title="All Property" />
@@ -60,10 +70,15 @@ const AllProperty = ({ property }) => {
                     {data === null && (
                       <span className="error">Property not available</span>
                     )}
-                    {data?.map((property) => (
+                    {propertyData?.map((property) => (
                       <ProductListCard property={property} key={property.id} />
                     ))}
                   </div>
+                  <Pagination
+                    postsPerPage={postsPerPage}
+                    totalPosts={data.length}
+                    paginate={paginate}
+                  />
                 </Tab>
                 <Tab eventKey="rent" title="Rent">
                   <div className="row">

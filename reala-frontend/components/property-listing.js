@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SectionTitle from "./global/section-title";
 import PropertyCard from "./property-card";
 
@@ -19,9 +20,9 @@ const PropertyListing = ({ data }) => {
             ""
           ) : (
             <div className="text-center mt-4">
-              <a href="/all-property" className="button-primary">
+              <Link href="/all-property" className="button-primary">
                 View All Property
-              </a>
+              </Link>
             </div>
           )}
         </div>
