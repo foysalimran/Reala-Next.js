@@ -16,7 +16,7 @@
       align-items: center;
       gap: 8px;
       @include media-breakpoint-down(sm) {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         justify-content: center;
       }
       .sort-btn {
@@ -62,7 +62,7 @@
       position: relative;
       img {
         border-radius: 5px;
-        height: 300px;
+        height: 235px;
         object-fit: cover;
         width: 100%;
       }
