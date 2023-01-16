@@ -23,3 +23,4 @@ Layout.defaultProps = {
   description: "Property Listing NEXT.JS, Strapi app",
   keywords: "reala, real estate",
 };
+
