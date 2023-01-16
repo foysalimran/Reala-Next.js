@@ -48,7 +48,7 @@ const AllProperty = ({ property }) => {
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const propertyData = data.slice(indexOfFirstPost, indexOfLastPost);
+  const propertyData = data?.slice(indexOfFirstPost, indexOfLastPost);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -77,7 +77,7 @@ const AllProperty = ({ property }) => {
                   </div>
                   <Pagination
                     postsPerPage={postsPerPage}
-                    totalPosts={data.length}
+                    totalPosts={data?.length}
                     paginate={paginate}
                   />
                 </Tab>
@@ -119,7 +119,7 @@ const AllProperty = ({ property }) => {
                   </div>
                   <Pagination
                     postsPerPage={postsPerPage}
-                    totalPosts={data.length}
+                    totalPosts={data?.length}
                     paginate={paginate}
                   />
                 </Tab>

@@ -20,8 +20,6 @@ const SearchRent = ({ property }) => {
     item?.attributes.title.toLowerCase().includes(search)
   );
 
-  console.log(searchProperty);
-
   return (
     <Layout title={`Search property with ${search}`}>
       <InnerPageLayout title="Search property with rent" />

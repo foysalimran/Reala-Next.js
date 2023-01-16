@@ -4,7 +4,7 @@ import { GiBathtub } from "react-icons/gi";
 import { MdBed, MdCall } from "react-icons/md";
 import { API_URL } from "../config";
 import Link from "next/link";
-
+console.log(API_URL);
 const PropertyCard = ({ property }) => {
   const {
     image,

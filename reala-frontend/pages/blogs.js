@@ -14,23 +14,25 @@ const Blogs = ({ blogs }) => {
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const blogData = data.slice(indexOfFirstPost, indexOfLastPost);
+  const blogData = data?.slice(indexOfFirstPost, indexOfLastPost);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  
+
   return (
     <Layout title="All Property Blogs">
       <InnerPageLayout title="Blogs" />
       <div className="blog section-padding">
         <div className="container">
-          <div className="row">
-            {blogData.map((blogs) => (
-              <Blog blogs={blogs} key={blogs.id} />
-            ))}
+          <div className="row justify-content-center">
+            {blogData === null || undefined || 0 ? (
+              <span className="error">Reala Blogs Not Pound</span>
+            ) : (
+              blogData?.map((blogs) => <Blog blogs={blogs} key={blogs.id} />)
+            )}
           </div>
           <Pagination
             postsPerPage={postsPerPage}
-            totalPosts={data.length}
+            totalPosts={data?.length}
             paginate={paginate}
           />
         </div>

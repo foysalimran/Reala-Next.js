@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/global/layout";
 import InnerPageLayout from "../components/inner-page-layout";
+import { CONTACTFROM } from "../config";
 
 const Contact = () => {
   return (
@@ -28,11 +29,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="col-lg-8">
-                <form
-                  id="contact-form"
-                  method="post"
-                  action="https://formspree.io/f/xeqdjekd"
-                >
+                <form id="contact-form" method="post" action={CONTACTFROM}>
                   <div className="d-lg-flex gap-lg-3 input">
                     <div className="w-100">
                       <label htmlFor="name">Name</label>
