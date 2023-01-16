@@ -81,12 +81,11 @@
       padding: 10px;
       height: auto;
     }
-    select {
+    input {
       width: 100%;
       padding: 10px;
       border: none;
       border-radius: 5px;
-      cursor: pointer;
       &:focus {
         outline: none;
       }

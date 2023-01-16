@@ -134,11 +134,6 @@ const AllProperty = ({ property }) => {
                       <PropertyCard property={property} key={property.id} />
                     ))}
                   </div>
-                  <Pagination
-                    postsPerPage={postsPerPage}
-                    totalPosts={data.length}
-                    paginate={paginate}
-                  />
                 </Tab>
                 <Tab eventKey="sale" title="Sale">
                   <div className="row">
