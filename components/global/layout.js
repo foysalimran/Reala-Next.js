@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Header from "./Headersss";
-import Footer from "./Footersss";
+import Header from "./Header";
+import Footer from "./Footer";
 
 export default function Layout({ title, keywords, description, children }) {
   return (
