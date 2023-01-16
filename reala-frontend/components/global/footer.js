@@ -133,9 +133,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-12">
               <p className="m-0 text-center">
-                &copy; 2023 All right reserved. Made with
-                <AiFillHeart />
-                by{" "}
+                &copy; 2023 All right reserved. Made with by {" "}
                 <a href="https://themeforest.net/user/themeatelier">
                   ThemeAtelier
                 </a>

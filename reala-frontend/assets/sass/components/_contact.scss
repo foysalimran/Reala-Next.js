@@ -24,7 +24,9 @@
     padding: 20px;
     border-radius: 5px;
     border: 1px solid $color-border;
-
+    @include media-breakpoint-down(sm) {
+      padding: 15px;
+    }
     label {
       font-size: 18px;
       font-weight: 500;

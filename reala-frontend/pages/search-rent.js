@@ -24,7 +24,7 @@ const SearchRent = ({ property }) => {
 
   return (
     <Layout title={`Search property with ${search}`}>
-      <InnerPageLayout title="Search property" />
+      <InnerPageLayout title="Search property with rent" />
       <div className="search-page all-property section-padding">
         <div className="container">
           <div className="row justify-content-center">
