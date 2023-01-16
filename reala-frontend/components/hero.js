@@ -7,12 +7,16 @@ const Hero = () => {
   const router = useRouter();
   const [key, setKey] = useState("rent");
   const [query, setQuery] = useState("");
-  const queryChangeHandler = (e) => {
+  const querySearchHandler = (e) => {
     setQuery(e.target.value.toLowerCase());
   };
-  const submitHandler = (e) => {
+  const submitHandlerRent = (e) => {
     e.preventDefault();
-    router.push(`/search?query=${query}`);
+    router.push(`/search-rent?query=${query}`);
+  };
+  const submitHandlerSale = (e) => {
+    e.preventDefault();
+    router.push(`/search-sale?query=${query}`);
   };
 
   return (
@@ -30,9 +34,9 @@ const Hero = () => {
               onSelect={(k) => setKey(k)}
             >
               <Tab eventKey="rent" title="For-Rent">
-                <form className="hero__search" onSubmit={submitHandler}>
+                <form className="hero__search" onSubmit={submitHandlerRent}>
                   <input
-                    onChange={queryChangeHandler}
+                    onChange={querySearchHandler}
                     type="text"
                     placeholder="Search..."
                   />
@@ -42,9 +46,9 @@ const Hero = () => {
                 </form>
               </Tab>
               <Tab eventKey="sale" title="For-Sale">
-                <form className="hero__search" onSubmit={submitHandler}>
+                <form className="hero__search" onSubmit={submitHandlerSale}>
                   <input
-                    onChange={queryChangeHandler}
+                    onChange={querySearchHandler}
                     type="text"
                     placeholder="Search..."
                   />
