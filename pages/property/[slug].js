@@ -26,7 +26,6 @@ import {
 } from "react-icons/fa";
 
 const PropertyPage = ({ properties, slug }) => {
-  console.log(properties);
   const property = properties?.filter((data) => data?.attributes.slug === slug);
 
   const {
