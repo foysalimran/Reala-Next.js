@@ -44,12 +44,11 @@ const SearchRent = ({ property }) => {
 
 export default SearchRent;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(`${API_URL}/api/properties?populate=*`);
   const property = await res.json();
 
   return {
     props: { property },
-    revalidate: 1,
   };
 }

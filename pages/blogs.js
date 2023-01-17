@@ -6,7 +6,6 @@ import Pagination from "../components/pagination";
 import { API_URL } from "../config";
 
 const Blogs = ({ blogs }) => {
-
   const { data } = blogs;
 
   // Pagination
@@ -44,12 +43,11 @@ const Blogs = ({ blogs }) => {
 
 export default Blogs;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(`${API_URL}/api/blogs?populate=*`);
   const blogs = await res.json();
 
   return {
     props: { blogs },
-    revalidate: 1,
   };
 }
