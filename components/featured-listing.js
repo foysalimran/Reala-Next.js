@@ -12,11 +12,11 @@ const FeaturedListing = ({ data }) => {
 
   const propertyRent = featured?.filter(
     (property) =>
-      property.attributes.categories.data[0].attributes.categoryname === "rent"
+      property.attributes.categories.data[0]?.attributes.categoryname === "rent"
   );
   const propertySale = featured?.filter(
     (property) =>
-      property.attributes.categories.data[0].attributes.categoryname === "sale"
+      property.attributes.categories.data[0]?.attributes.categoryname === "sale"
   );
 
   return (

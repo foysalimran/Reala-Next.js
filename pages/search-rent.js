@@ -10,7 +10,7 @@ const SearchRent = ({ property }) => {
 
   const propertyRent = data?.filter(
     (property) =>
-      property.attributes.categories.data[0].attributes.categoryname === "rent"
+      property.attributes.categories.data[0]?.attributes.categoryname === "rent"
   );
 
   const router = useRouter();
