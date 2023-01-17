@@ -24,9 +24,9 @@ const FeaturedListing = ({ data }) => {
         <SectionTitle title="Featured Listing" />
         <div className="featured-listing__wrapper">
           <Tabs
-            id="controlled-tab-example"
             activeKey={key}
             onSelect={(k) => setKey(k)}
+            id="controlled-tab-example-listing"
           >
             <Tab eventKey="rent" title="Rent">
               <div className="row justify-content-center">

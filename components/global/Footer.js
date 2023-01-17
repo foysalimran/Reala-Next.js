@@ -106,17 +106,29 @@ const Footer = () => {
               <p>You should connect social area for any update</p>
               <ul>
                 <li>
-                  <a href="https://www.facebook.com" className="icon">
+                  <a
+                    href="https://www.facebook.com"
+                    aria-label="Facebook"
+                    className="icon"
+                  >
                     <FaFacebookF />
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.twitter.com" className="icon">
+                  <a
+                    href="https://www.twitter.com"
+                    aria-label="Twitter"
+                    className="icon"
+                  >
                     <FaTwitter />
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com" className="icon">
+                  <a
+                    href="https://www.instagram.com"
+                    aria-label="Instagram"
+                    className="icon"
+                  >
                     <FaInstagram />
                   </a>
                 </li>
@@ -133,7 +145,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-12">
               <p className="m-0 text-center">
-                &copy; 2023 All right reserved. Made with by {" "}
+                &copy; 2023 All right reserved. Made with by{" "}
                 <a href="https://themeforest.net/user/themeatelier">
                   ThemeAtelier
                 </a>

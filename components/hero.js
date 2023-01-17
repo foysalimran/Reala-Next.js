@@ -29,7 +29,7 @@ const Hero = () => {
               We helps people to getting home and renting with good price
             </h5>
             <Tabs
-              id="controlled-tab-example"
+              id="controlled-tab-example-hero"
               activeKey={key}
               onSelect={(k) => setKey(k)}
             >
