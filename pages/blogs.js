@@ -6,6 +6,7 @@ import Pagination from "../components/pagination";
 import { API_URL } from "../config";
 
 const Blogs = ({ blogs }) => {
+  console.log("blogs", blogs);
   const { data } = blogs;
 
   // Pagination

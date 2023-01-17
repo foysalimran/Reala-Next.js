@@ -26,6 +26,7 @@ import {
 } from "react-icons/fa";
 
 const PropertyPage = ({ properties, slug }) => {
+  console.log(properties);
   const property = properties?.filter((data) => data?.attributes.slug === slug);
 
   const {
@@ -34,9 +35,8 @@ const PropertyPage = ({ properties, slug }) => {
     title,
     description,
     rating,
-    type,
     location,
-    phone,
+    date,
     beds,
     baths,
     user,
@@ -100,8 +100,11 @@ const PropertyPage = ({ properties, slug }) => {
                 <GoLocation /> {location}
               </li>
               <li>
-                <AiFillStar />
-                {rating}
+                <span>
+                  <AiFillStar />
+                  {rating}
+                </span>
+                5 Reviews
               </li>
             </ul>
           </div>
@@ -149,36 +152,46 @@ const PropertyPage = ({ properties, slug }) => {
                           <FaVoteYea />
                           Built Year
                         </span>{" "}
-                        <span>2019</span>
+                        <span>
+                          {new Date(date).toLocaleDateString("en-US")}
+                        </span>
                       </li>
                     </ul>
                   </div>
                 </div>
-                <div className="description-card">
-                  <div className="description-card__header">
-                    <h4>Description</h4>
+                {description === null ? (
+                  ""
+                ) : (
+                  <div className="description-card">
+                    <div className="description-card__header">
+                      <h4>Description</h4>
+                    </div>
+                    <div className="description-card__body">
+                      <p>{description}</p>
+                    </div>
                   </div>
-                  <div className="description-card__body">
-                    <p>{description}</p>
-                  </div>
-                </div>
+                )}
 
-                <div className="description-card">
-                  <div className="description-card__header">
-                    <h4>Property Features</h4>
+                {propertyFeature === null ? (
+                  ""
+                ) : (
+                  <div className="description-card">
+                    <div className="description-card__header">
+                      <h4>Property Features</h4>
+                    </div>
+                    <div className="description-card__body features">
+                      <ul>
+                        {propertyFeature.map((features) => (
+                          <li key={features.id}>
+                            <span>
+                              <BsCheckCircle /> {features.feature}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <div className="description-card__body features">
-                    <ul>
-                      {propertyFeature.map((features) => (
-                        <li>
-                          <span>
-                            <BsCheckCircle /> {features.feature}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                )}
               </div>
               <div className="col-md-4">
                 <div className="description-sidebar">

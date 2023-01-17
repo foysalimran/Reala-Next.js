@@ -2,7 +2,8 @@ import Link from "next/link";
 import { API_URL } from "../config";
 
 const Blog = ({ blogs }) => {
-  const { image, title, subtitle, date, slug } = blogs.attributes;
+  
+  const { image, title, subtitle, date, slug } = blogs?.attributes;
 
   return (
     <div className="col-md-6 col-lg-4 mb-4">

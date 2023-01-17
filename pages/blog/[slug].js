@@ -16,6 +16,7 @@ import RelatedBlog from "../../components/related-blog";
 import { API_URL } from "../../config";
 
 const SingleBlog = ({ blogs, slug }) => {
+
   const blog = blogs?.filter((data) => data?.attributes.slug === slug);
   const { title, image, subtitle, description, date, user } =
     blog[0]?.attributes;
