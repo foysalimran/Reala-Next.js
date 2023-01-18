@@ -158,7 +158,7 @@ const AllProperty = ({ property }) => {
 
 export default AllProperty;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(`${API_URL}/api/properties?populate=*`);
   const property = await res.json();
 

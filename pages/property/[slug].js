@@ -261,7 +261,7 @@ const PropertyPage = ({ properties, slug }) => {
 
 export default PropertyPage;
 
-export async function getServerSideProps({ query: { slug } }) {
+export async function getStaticProps({ query: { slug } }) {
   const res = await fetch(`${API_URL}/api/properties?populate=*`);
   const allProperty = await res.json();
   const properties = allProperty.data;
