@@ -9,6 +9,7 @@ const AllPropertyNav = ({ data, setView, view, searchProperty }) => {
           <button
             onClick={() => setView(false)}
             className={view ? "sort-btn" : "active sort-btn"}
+            aria-label="Grid view"
           >
             <BsFillGridFill className="icon" />
           </button>
@@ -16,6 +17,7 @@ const AllPropertyNav = ({ data, setView, view, searchProperty }) => {
           <button
             onClick={() => setView(true)}
             className={view === false ? "sort-btn" : "active sort-btn"}
+            aria-label="List view"
           >
             <HiViewList className="icon" />
           </button>

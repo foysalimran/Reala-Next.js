@@ -133,7 +133,11 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+880123456789" className="icon">
+                  <a
+                    aria-label="Whatsapp"
+                    href="tel:+880123456789"
+                    className="icon"
+                  >
                     <FaWhatsapp />
                   </a>
                 </li>

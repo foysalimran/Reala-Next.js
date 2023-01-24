@@ -33,7 +33,7 @@ const WhyChooseUs = () => {
                     <div className="icon">
                       <VscWorkspaceTrusted />
                     </div>
-                    <h5>Trusted Company</h5>
+                    <h3>Trusted Company</h3>
                     <p>
                       Fusce elementum vulputate ipsum in molestie. Proin
                       interdum lectu blandit tortor facilisis efficitur
@@ -46,7 +46,7 @@ const WhyChooseUs = () => {
                     <div className="icon">
                       <MdEngineering />
                     </div>
-                    <h5>Experienced</h5>
+                    <h3>Experienced</h3>
                     <p>
                       Fusce elementum vulputate ipsum in molestie. Proin
                       interdum lectu blandit tortor facilisis efficitur
@@ -59,7 +59,7 @@ const WhyChooseUs = () => {
                     <div className="icon">
                       <TbCertificate />
                     </div>
-                    <h5>Certified Worker</h5>
+                    <h3>Certified Worker</h3>
                     <p>
                       Fusce elementum vulputate ipsum in molestie. Proin
                       interdum lectu blandit tortor facilisis efficitur
@@ -72,7 +72,7 @@ const WhyChooseUs = () => {
                     <div className="icon">
                       <FiHelpCircle />
                     </div>
-                    <h5>24/7 Support</h5>
+                    <h3>24/7 Support</h3>
                     <p>
                       Fusce elementum vulputate ipsum in molestie. Proin
                       interdum lectu blandit tortor facilisis efficitur

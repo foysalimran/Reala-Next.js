@@ -25,9 +25,9 @@ const Hero = () => {
         <div className="row align-items-center">
           <div className="col-lg-6">
             <h1 className="display-3">Find your dream home now</h1>
-            <h5 className="mb-5">
+            <h3 className="mb-5 fs-5">
               We helps people to getting home and renting with good price
-            </h5>
+            </h3>
             <Tabs
               id="controlled-tab-example-hero"
               activeKey={key}
@@ -40,7 +40,7 @@ const Hero = () => {
                     type="text"
                     placeholder="Search..."
                   />
-                  <button type="submit">
+                  <button type="submit" aria-label="Search for-rent">
                     <BsSearch />
                   </button>
                 </form>
@@ -52,7 +52,7 @@ const Hero = () => {
                     type="text"
                     placeholder="Search..."
                   />
-                  <button type="submit">
+                  <button type="submit" aria-label="Search for-sale">
                     <BsSearch />
                   </button>
                 </form>
