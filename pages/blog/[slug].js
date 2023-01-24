@@ -79,7 +79,7 @@ const SingleBlog = ({ blogs, slug }) => {
                       </a>
                     </li>
                     <li>
-                      <a target="_blank" href={`https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Freala-next-js-zyly.vercel.app%2Fblog%2F${slug}%2F&title=Righteous+and+dislike`}>
+                      <a target="_blank" href={`https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Freala-next-js-zyly.vercel.app%2Fblog%2F${slug}%2F&title=Righteous+and+dislike`}>
                         <FaLinkedinIn /> Share
                       </a>
                     </li>
