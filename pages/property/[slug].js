@@ -24,6 +24,7 @@ import {
   FaWhatsapp,
   FaVoteYea,
 } from "react-icons/fa";
+import md from 'markdown-it';
 
 const PropertyPage = ({ properties, slug }) => {
   const property = properties?.filter((data) => data?.attributes.slug === slug);
@@ -166,7 +167,7 @@ const PropertyPage = ({ properties, slug }) => {
                       <h4>Description</h4>
                     </div>
                     <div className="description-card__body">
-                      <p>{description}</p>
+                    <div dangerouslySetInnerHTML={{ __html: md().render(description) }} />
                     </div>
                   </div>
                 )}

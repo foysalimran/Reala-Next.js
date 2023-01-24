@@ -9,11 +9,11 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { MdUpdate } from "react-icons/md";
-import { VscReply } from "react-icons/vsc";
 import Layout from "../../components/global/layout";
 import InnerPageLayout from "../../components/inner-page-layout";
 import RelatedBlog from "../../components/related-blog";
 import { API_URL } from "../../config";
+import md from "markdown-it";
 
 const SingleBlog = ({ blogs, slug }) => {
   const blog = blogs?.filter((data) => data?.attributes.slug === slug);
@@ -52,15 +52,20 @@ const SingleBlog = ({ blogs, slug }) => {
                   <p className="subtitle">{subtitle}</p>
                 </div>
                 <div className="content__body">
-                  <p>{description}</p>
+                  <div
+                    className="content__body__description"
+                    dangerouslySetInnerHTML={{
+                      __html: md().render(description),
+                    }}
+                  />
                 </div>
                 <div className="content__share">
                   <p>Share this article:</p>
                   <ul>
                     <li>
-                      <Link href="#">
+                      <a target="_blank" href={`https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdemo.directorist.com%2Ftheme%2Fdrealestate%2F${slug}%2F`}>
                         <FaFacebookF /> Share
-                      </Link>
+                      </a>
                     </li>
                     <li>
                       <Link href="#">
@@ -98,7 +103,6 @@ const SingleBlog = ({ blogs, slug }) => {
 export default SingleBlog;
 
 export async function getServerSideProps({ query: { slug } }) {
-  console.log(slug);
   const res = await fetch(`${API_URL}/api/blogs?populate=*`);
   const allBlogs = await res.json();
   const blogs = allBlogs.data;
