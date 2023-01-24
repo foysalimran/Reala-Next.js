@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { API_URL } from "../config";
+import Moment from "react-moment";
 
 const Blog = ({ blogs }) => {
   const { image, title, subtitle, date, slug } = blogs?.attributes;
@@ -22,7 +23,7 @@ const Blog = ({ blogs }) => {
           <h3 className="title">
             <Link href={`/blog/${slug}`}>{title}</Link>
           </h3>
-          <p>Created At: {new Date(date).toLocaleDateString("en-US")}</p>
+          <Moment format="DD/MM/YYYY">{date}</Moment>
           <p>{subtitle}</p>
         </div>
       </div>
