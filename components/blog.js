@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { API_URL } from "../config";
-import Moment from "react-moment";
+import moment from 'moment';
 import 'moment-timezone';
 
 const Blog = ({ blogs }) => {
@@ -26,7 +26,7 @@ const Blog = ({ blogs }) => {
           </h3>
           <p>
             Created At:{" "}
-            <Moment format="DD/MM/YYYY">{date}</Moment>
+            {moment(date).tz("America/New_York").format('MMMM Do YYYY')}
           </p>
           <p>{subtitle}</p>
         </div>
