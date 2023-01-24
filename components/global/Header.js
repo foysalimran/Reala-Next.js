@@ -65,14 +65,20 @@ const Header = () => {
             </ul>
           </Navbar.Collapse>
 
-          <ul className="navbar-nav navbar__right d-none d-lg-flex gap-1 align-items-center">
+          <ul className="navbar-nav navbar__right d-none d-lg-flex gap-2">
             <li className="nav-item">
-              <Link className="nav-link" href="mailto:admin@gmail.com">
+              <Link
+                className="nav-link d-flex gap-2 align-items-center"
+                href="mailto:admin@gmail.com"
+              >
                 <MdOutlineMailOutline /> admin@gmail.com
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href="tel:0123456789">
+              <Link
+                className="nav-link d-flex gap-2 align-items-center"
+                href="tel:0123456789"
+              >
                 <MdCall /> 0123456789
               </Link>
             </li>

@@ -87,100 +87,10 @@
           }
           &__related {
             padding-top: 60px;
-            padding-bottom: 55px;
             border-top: 1px solid $color-border;
-            border-bottom: 1px solid $color-border;
-          }
-          .comment-area {
-            padding-top: 60px;
-            padding-bottom: 55px;
-          }
-          &__comment {
-            padding: 30px;
-            border-radius: 5px;
-            border: 1px solid $color-border;
-            @include media-breakpoint-down(lg) {
-              padding: 15px;
-            }
-            &__single {
-              display: grid;
-              gap: 30px;
-              grid-template-columns: 60px 1fr;
-              &:first-child {
-                padding-top: 0;
-              }
-              &:last-child {
-                padding-bottom: 0;
-              }
-              padding: 15px 0;
-              &:not(:first-child) {
-                border-top: 1px solid #e3e6ef;
-              }
-              @include media-breakpoint-down(lg) {
-                gap: 15px;
-              }
-              &--image {
-                img {
-                  width: 60px;
-                  height: 60px;
-                  border-radius: 50%;
-                }
-              }
-              &--info {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 12px;
-                .user {
-                  h6 {
-                    margin-bottom: 8px;
-                  }
-                  p {
-                    margin-bottom: 0;
-                  }
-                }
-                .reply {
-                  button {
-                    display: flex;
-                    align-items: center;
-                    border-radius: 15px;
-                    padding: 5px 15px;
-                    font-size: 14px;
-                    border: 1px solid $color-border;
-                    background-color: $color-light;
-                    gap: 5px;
-                  }
-                }
-              }
-              &--area {
-                .comment {
-                  font-size: 14px;
-                }
-              }
-            }
-          }
-          &__respond {
-            border: 1px solid $color-border;
-            margin-top: 50px;
-            padding: 40px 30px;
-            clear: both;
-            border-radius: 5px;
-            &__title {
-              margin-bottom: 10px;
-              font-size: 22px;
-            }
-            input, textarea {
-              width: 100%;
-              margin-bottom: 30px;
-              padding: 5px 15px;
-              border-radius: 5px;
-              border: 1px solid $color-border;
-              transition: all 0.5s;
-              &:hover,
-              &:focus {
-                border: 1px solid $color-primary;
-                outline: none;
-              }
+            &:not(:last-child) {
+              padding-bottom: 55px;
+              border-bottom: 1px solid $color-border;
             }
           }
         }

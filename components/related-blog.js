@@ -10,7 +10,11 @@ const RelatedBlog = ({ blog }) => {
         <div className="blog__item--image">
           <img
             className="img-fluid"
-            src={`${API_URL}${image.data.attributes.url}`}
+            src={
+              image?.data !== null
+                ? `${API_URL}${image?.data?.attributes.url}`
+                : "/images/404.jpg"
+            }
             alt=""
           />
         </div>

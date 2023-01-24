@@ -75,11 +75,15 @@ const AllProperty = ({ property }) => {
                       <ProductListCard property={property} key={property.id} />
                     ))}
                   </div>
-                  <Pagination
-                    postsPerPage={postsPerPage}
-                    totalPosts={data?.length}
-                    paginate={paginate}
-                  />
+                  {data.length > 6 ? (
+                    <Pagination
+                      postsPerPage={postsPerPage}
+                      totalPosts={data?.length}
+                      paginate={paginate}
+                    />
+                  ) : (
+                    ""
+                  )}
                 </Tab>
                 <Tab eventKey="rent" title="Rent">
                   <div className="row">
@@ -117,11 +121,15 @@ const AllProperty = ({ property }) => {
                       <PropertyCard property={property} key={property.id} />
                     ))}
                   </div>
-                  <Pagination
-                    postsPerPage={postsPerPage}
-                    totalPosts={data?.length}
-                    paginate={paginate}
-                  />
+                  {data.length > 6 ? (
+                    <Pagination
+                      postsPerPage={postsPerPage}
+                      totalPosts={data?.length}
+                      paginate={paginate}
+                    />
+                  ) : (
+                    ""
+                  )}
                 </Tab>
                 <Tab eventKey="rent" title="Rent">
                   <div className="row">

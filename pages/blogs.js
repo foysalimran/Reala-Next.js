@@ -30,11 +30,15 @@ const Blogs = ({ blogs }) => {
               blogData?.map((blogs) => <Blog blogs={blogs} key={blogs.id} />)
             )}
           </div>
-          <Pagination
-            postsPerPage={postsPerPage}
-            totalPosts={data?.length}
-            paginate={paginate}
-          />
+          {data.length > 6 ? (
+            <Pagination
+              postsPerPage={postsPerPage}
+              totalPosts={data?.length}
+              paginate={paginate}
+            />
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </Layout>
