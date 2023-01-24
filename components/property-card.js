@@ -18,7 +18,7 @@ const PropertyCard = ({ property }) => {
     beds,
     baths,
     propertyType,
-  } = property.attributes;
+  } = property?.attributes;
   return (
     <div className="col-md-6 col-lg-4 mb-4 property">
       <div className="featured-list__item">

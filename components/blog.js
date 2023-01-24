@@ -4,7 +4,7 @@ import { API_URL } from "../config";
 const Blog = ({ blogs }) => {
   
   const { image, title, subtitle, date, slug } = blogs?.attributes;
-
+console.log("slug", slug);
   return (
     <div className="col-md-6 col-lg-4 mb-4">
       <div className="blog__item">

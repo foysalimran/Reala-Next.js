@@ -11,14 +11,12 @@ const ProductListCard = ({ property }) => {
     price,
     slug,
     title,
-    rating,
-    type,
     location,
     phone,
     beds,
     baths,
     propertyType,
-  } = property.attributes;
+  } = property?.attributes;
 
   return (
     <>

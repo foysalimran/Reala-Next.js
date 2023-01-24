@@ -2,7 +2,7 @@ import Link from "next/link";
 import { API_URL } from "../config";
 
 const RelatedBlog = ({ blog }) => {
-  const { image, title, subtitle, date, slug } = blog.attributes;
+  const { image, title, subtitle, date, slug } = blog?.attributes;
 
   return (
     <div className="col-md-6 mb-4 mb-md-0">
