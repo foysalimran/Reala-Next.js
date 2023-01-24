@@ -71,9 +71,12 @@ const SingleBlog = ({ blogs, slug }) => {
                       </a>
                     </li>
                     <li>
-                      <Link href="#">
+                      <a
+                        target="_blank"
+                        href={`https://twitter.com/intent/tweet?source=https%3A%2F%2Freala-next-js-zyly.vercel.app%2Fblog%2${slug}%2F&text=Righteous+and+dislike:https%3A%2F%2FFreala-next-js-zyly.vercel.app%2Fblog%2${slug}%2F`}
+                      >
                         <FaTwitter /> Tweet
-                      </Link>
+                      </a>
                     </li>
                     <li>
                       <Link href="#">
