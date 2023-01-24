@@ -14,6 +14,8 @@ import InnerPageLayout from "../../components/inner-page-layout";
 import RelatedBlog from "../../components/related-blog";
 import { API_URL } from "../../config";
 import md from "markdown-it";
+import moment from 'moment';
+import 'moment-timezone';
 
 const SingleBlog = ({ blogs, slug }) => {
   const blog = blogs?.filter((data) => data?.attributes.slug === slug);
@@ -39,7 +41,7 @@ const SingleBlog = ({ blogs, slug }) => {
                   </p>
                   <p>
                     <MdUpdate />
-                    {new Date(date).toLocaleDateString("en-US")}
+                    {moment(date).tz("America/New_York").format('MMMM Do YYYY')}
                   </p>
                   <p>
                     <FaRegComment />3 Comments
