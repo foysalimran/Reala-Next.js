@@ -5,7 +5,6 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
-import { AiFillHeart } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import { MAILCHAIMP } from "../../config";
 
@@ -63,7 +62,6 @@ const Footer = () => {
             <h3>Join Newsletter</h3>
             <MailchimpSubscribe
               url={MAILCHAIMP}
-              // url={process.env.MAILCHAIMP_LINK}
               render={({ subscribe, status, message }) => (
                 <SubscribeForm
                   status={status}
@@ -148,12 +146,7 @@ const Footer = () => {
         <div className="footer__copyright m-20px-t m-20px-b">
           <div className="row">
             <div className="col-12">
-              <p className="m-0 text-center">
-                &copy; 2023 All right reserved. Made with by{" "}
-                <a href="https://themeforest.net/user/themeatelier">
-                  ThemeAtelier
-                </a>
-              </p>
+              <p className="m-0 text-center">&copy; 2023 All right reserved.</p>
             </div>
           </div>
         </div>
