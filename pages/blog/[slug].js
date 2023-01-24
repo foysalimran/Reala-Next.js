@@ -63,7 +63,10 @@ const SingleBlog = ({ blogs, slug }) => {
                   <p>Share this article:</p>
                   <ul>
                     <li>
-                      <a target="_blank" href={`https://www.facebook.com/sharer.php?u=https%3A%2F%2Freala-next-js-zyly.vercel.app%2Ftheme%2Fdrealestate%2F${slug}%2F`}>
+                      <a
+                        target="_blank"
+                        href={`https://www.facebook.com/sharer.php?u=https%3A%2F%2Freala-next-js-zyly.vercel.app%2Fblog%2F${slug}%2F`}
+                      >
                         <FaFacebookF /> Share
                       </a>
                     </li>
