@@ -23,7 +23,10 @@ const Blog = ({ blogs }) => {
           <h3 className="title">
             <Link href={`/blog/${slug}`}>{title}</Link>
           </h3>
-          <Moment format="DD/MM/YYYY">{date}</Moment>
+          <p>
+            Created At:{" "}
+            <Moment format="DD/MM/YYYY">{date}</Moment>
+          </p>
           <p>{subtitle}</p>
         </div>
       </div>
