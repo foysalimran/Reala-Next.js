@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { API_URL } from "../config";
 import Moment from "react-moment";
+import 'moment-timezone';
 
 const Blog = ({ blogs }) => {
   const { image, title, subtitle, date, slug } = blogs?.attributes;
