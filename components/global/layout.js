@@ -9,6 +9,7 @@ export default function Layout({ title, keywords, description, children }) {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
+        <meta httpEquiv="Cache-Control" content="max-age=31536000" />
       </Head>
 
       <Header />
