@@ -24,7 +24,7 @@ import {
   FaWhatsapp,
   FaVoteYea,
 } from "react-icons/fa";
-import md from 'markdown-it';
+import md from "markdown-it";
 
 const PropertyPage = ({ properties, slug }) => {
   const property = properties?.filter((data) => data?.attributes.slug === slug);
@@ -42,7 +42,14 @@ const PropertyPage = ({ properties, slug }) => {
     user,
     propertyFeature,
     propertyType,
+    categories,
   } = property[0]?.attributes;
+
+  const relatedProperty = properties?.filter(
+    (data) =>
+      data?.attributes.categories.data[0]?.attributes.categoryname ===
+      categories?.data[0]?.attributes.categoryname
+  );
 
   return (
     <Layout title={title}>
@@ -167,7 +174,11 @@ const PropertyPage = ({ properties, slug }) => {
                       <h4>Description</h4>
                     </div>
                     <div className="description-card__body">
-                    <div dangerouslySetInnerHTML={{ __html: md().render(description) }} />
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: md().render(description),
+                        }}
+                      />
                     </div>
                   </div>
                 )}
@@ -247,7 +258,7 @@ const PropertyPage = ({ properties, slug }) => {
               <SectionTitle position="left" title="Similar Properties" />
               <div className="featured-listing__wrapper">
                 <div className="row">
-                  {properties?.slice(0, 3).map((property) => (
+                  {relatedProperty?.slice(0, 3).map((property) => (
                     <PropertyCard property={property} key={property.id} />
                   ))}
                 </div>
