@@ -43,9 +43,6 @@ const SingleBlog = ({ blogs, slug }) => {
                     <MdUpdate />
                     {moment(date).tz("America/New_York").format('MMMM Do YYYY')}
                   </p>
-                  <p>
-                    <FaRegComment />3 Comments
-                  </p>
                 </div>
               </div>
               <div className="content">
@@ -84,11 +81,6 @@ const SingleBlog = ({ blogs, slug }) => {
                       <a target="_blank" href={`https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Freala-next-js-zyly.vercel.app%2Fblog%2F${slug}%2F&title=${title}`}>
                         <FaLinkedinIn /> Share
                       </a>
-                    </li>
-                    <li>
-                      <Link href="#">
-                        <BsMedium /> Share
-                      </Link>
                     </li>
                   </ul>
                 </div>

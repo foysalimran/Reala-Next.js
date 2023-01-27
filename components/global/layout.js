@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 export default function Layout({ title, keywords, description, children }) {
   return (
-    <div>
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -13,9 +13,9 @@ export default function Layout({ title, keywords, description, children }) {
       </Head>
 
       <Header />
-      <div>{children}</div>
+      <>{children}</>
       <Footer />
-    </div>
+    </>
   );
 }
 
