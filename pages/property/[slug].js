@@ -52,7 +52,7 @@ const PropertyPage = ({ properties, slug }) => {
   );
 
   return (
-    <Layout title="{title}">
+    <Layout title={title}>
       {property === null ? (
         <div className="loader">
           <Skeleton />
