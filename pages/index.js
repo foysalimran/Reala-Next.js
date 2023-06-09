@@ -24,7 +24,7 @@ export default function Home({ property }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(`${API_URL}/api/properties?populate=*`);
   const property = await res.json();
 

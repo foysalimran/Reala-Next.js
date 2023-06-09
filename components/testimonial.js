@@ -4,6 +4,7 @@ import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import SectionTitle from "./global/section-title";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { IoMdQuote } from "react-icons/io";
 
 const Testimonial = () => {
   return (
@@ -20,7 +21,7 @@ const Testimonial = () => {
                 768: {
                   slidesPerView: 2,
                   spaceBetween: 20,
-                }
+                },
               }}
             >
               <SwiperSlide>
@@ -35,6 +36,9 @@ const Testimonial = () => {
                     </div>
                     <h3 className="user__name">Mark Tony</h3>
                     <p className="user__title">Software Developer</p>
+                    <div className="quote__icon">
+                      <IoMdQuote />
+                    </div>
                   </div>
                   <p className="user__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -56,6 +60,9 @@ const Testimonial = () => {
                     </div>
                     <h3 className="user__name">Jhon Dow</h3>
                     <p className="user__title">Frontend Developer</p>
+                    <div className="quote__icon">
+                      <IoMdQuote />
+                    </div>
                   </div>
                   <p className="user__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -77,6 +84,9 @@ const Testimonial = () => {
                     </div>
                     <h3 className="user__name">Lama Dev</h3>
                     <p className="user__title">Full-stack Developer</p>
+                    <div className="quote__icon">
+                      <IoMdQuote />
+                    </div>
                   </div>
                   <p className="user__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -98,6 +108,9 @@ const Testimonial = () => {
                     </div>
                     <h3 className="user__name">Jorina begum</h3>
                     <p className="user__title">Book Writer</p>
+                    <div className="quote__icon">
+                      <IoMdQuote />
+                    </div>
                   </div>
                   <p className="user__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.

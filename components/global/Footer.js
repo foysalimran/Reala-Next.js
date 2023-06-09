@@ -6,6 +6,7 @@ import {
 } from "react-icons/fa";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import { GoLocation } from "react-icons/go";
+import { AiFillHeart } from "react-icons/ai";
 import { MAILCHAIMP } from "../../config";
 
 //SUBSCRIBE FORM
@@ -54,6 +55,7 @@ function SubscribeForm({ status, message, onValidated }) {
 }
 
 const Footer = () => {
+
   return (
     <div className="footer footer-padding-t">
       <div className="container">
@@ -146,7 +148,7 @@ const Footer = () => {
         <div className="footer__copyright m-20px-t m-20px-b">
           <div className="row">
             <div className="col-12">
-              <p className="m-0 text-center">&copy; 2023 All right reserved.</p>
+              <p className="m-0 text-center">&copy; {new Date().getFullYear()} All right reserved. Made with <AiFillHeart /> by <a href="https://codecanyon.net/user/themeatelier">ThemeAtelier</a></p>
             </div>
           </div>
         </div>
