@@ -3,6 +3,7 @@ import SectionTitle from "./global/section-title";
 import PropertyCard from "./property-card";
 
 const PropertyListing = ({ data }) => {
+  
   return (
     <div className="featured-list section-padding">
       <div className="container">
