@@ -118,8 +118,7 @@ const AllProperty = ({ property }) => {
                       <span className="error">Property not available</span>
                     ) : null}
                     {propertyData?.map((property) => (
-                      <h2>Hello world</h2>
-                      // <PropertyCard property={property} key={property.id} />
+                      <PropertyCard property={property} key={property.id} />
                     ))}
                   </div>
                   {data.length > 6 ? (
